@@ -61,6 +61,4 @@ int(keyboard_restore)();
 */
 int (keyboard_enable_interrupts)();
 
-
-
 #endif /* __KEYBOARD_H */
