@@ -13,7 +13,7 @@ int (kbc_read_status)(uint8_t *status) {
 
 int (kbc_read_output)(uint8_t *output) {
 	uint8_t status;
-	for (int i = 0; i < KBC_MAX_ATTEMPTS; i++) {
+	while(1) {
 		if (kbc_read_status(&status)) {
 			printf("%s: kbc_read_status(status: 0x%x) error\n", __func__, status);
 			return 1;
