@@ -13,7 +13,8 @@ extern scancode code;
 extern struct packet mouse_packet;
 
 Ball *ball = NULL;
-Wall *wall = NULL;
+Wall *wall_1 = NULL;
+Wall *wall_2 = NULL;
 
 uint16_t x_max;
 uint16_t y_max;
@@ -32,12 +33,19 @@ int start_game(uint16_t xResolution, uint16_t yResolution, uint8_t difficulty) {
     return 1;
   }
 
-  wall = construct_wall(0, yResolution / 2 - 45 / difficulty, 10, 90 / difficulty);
-  if (!wall) {
+  wall_1 = construct_wall(0, yResolution / 2 - 45 / difficulty, 10, 90 / difficulty);
+  wall_2 = construct_wall(xResolution - 10, yResolution / 2 - 45 / difficulty, 10, 90 / difficulty);
+
+  if (!wall_1) {
     printf("%s: construct_wall(%d, %d, %d, %d) error\n", __func__, 0, yResolution / 2 - 45 / difficulty, 10, 90 / difficulty);
     return 1;
   }
 
+  if (!wall_2) {
+    printf("%s: construct_wall(%d, %d, %d, %d) error\n", __func__, xResolution - 10, yResolution / 2 - 45 / difficulty, 10, 90 / difficulty);
+    return 1;
+  }
+  
   if (construct_numbers()) {
     printf("%s: construct_numbers() error\n", __func__);
     return 1;
@@ -56,11 +64,18 @@ int start_game(uint16_t xResolution, uint16_t yResolution, uint8_t difficulty) {
 void timer_game_handler() {
   counter++;
   int16_t y = ball->y + ball->sprite->height / 2; // ordenada do ponto mais à esquerda da bola
-  if (ball->x <= wall->x + wall->w && y >= wall->y && y <= wall->y + wall->h) {
+  if (ball->x <= wall_1->x + wall_1->w && y >= wall_1->y && y <= wall_1->y + wall_1->h) {
     // colisão da bola com a parede
     score += multiplier;
-    move_ball_after_collision_with_wall(ball, wall);
+    move_ball_after_collision_with_wall(ball, wall_1);
   }
+
+  if (ball->x + ball->sprite->width >= wall_2->x && y >= wall_2->y && y <= wall_2->y + wall_2->h) {
+    // colisão da bola com a parede
+    score += multiplier;
+    move_ball_after_collision_with_wall(ball, wall_2);
+  }
+
   move_ball(ball, x_max, y_max);
   if (counter % speedup == 0 && !speedup_ball(ball)) {
     multiplier++;
@@ -70,10 +85,16 @@ void timer_game_handler() {
 }
 
 void keyboard_game_handler() {
-  if ((code.size == 2 && code.bytes[1] == KBD_ARROW_UP_MAKECODE_LSB) || (code.size == 1 && code.bytes[0] == KBD_W_MAKECODE))
-    move_wall_up(wall);
-  if ((code.size == 2 && code.bytes[1] == KBD_ARROW_DOWN_MAKECODE_LSB) || (code.size == 1 && code.bytes[0] == KBD_S_MAKECODE))
-    move_wall_down(wall, y_max);
+  if ((code.size == 1 && code.bytes[0] == KBD_W_MAKECODE))
+    move_wall_up(wall_1);
+  if ((code.size == 1 && code.bytes[0] == KBD_S_MAKECODE))
+    move_wall_down(wall_1, y_max);
+  
+  if((code.size == 2 && code.bytes[1] == KBD_ARROW_UP_MAKECODE_LSB))
+    move_wall_up(wall_2);
+  
+  if((code.size == 2 && code.bytes[1] == KBD_ARROW_DOWN_MAKECODE_LSB))
+    move_wall_down(wall_2, y_max);
 }
 
 void mouse_game_handler() {
@@ -85,11 +106,18 @@ void mouse_game_handler() {
 }
 
 bool check_game_over() {
-  return ball->x <= wall->x && (ball->y < wall->y || ball->y > wall->y + wall->h);
+  if(ball->x <= wall_1->x && (ball->y < wall_1->y || ball->y > wall_1->y + wall_1->h)){
+    return true;
+  }
+  if(ball->x + ball->sprite->width >= wall_2->x && (ball->y < wall_2->y || ball->y > wall_2->y + wall_2->h)){
+    return true;
+  }
+  return false;
 }
 
 void end_game() {
   destroy_ball(ball);
-  destroy_wall(wall);
+  destroy_wall(wall_1);
+  destroy_wall(wall_2);
   destroy_numbers();
 }

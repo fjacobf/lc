@@ -9,7 +9,8 @@
 #include "wall_view.h"
 
 extern Ball *ball;
-extern Wall *wall;
+extern Wall *wall_1;
+extern Wall *wall_2;
 extern uint32_t score;
 extern uint8_t multiplier;
 
@@ -37,7 +38,12 @@ int draw_game() {
     return 1;
   }
 
-  if (draw_wall(wall)) {
+  if (draw_wall(wall_1)) {
+    printf("%s: draw_wall(wall) error\n", __func__);
+    return 1;
+  }
+
+  if (draw_wall(wall_2)) {
     printf("%s: draw_wall(wall) error\n", __func__);
     return 1;
   }

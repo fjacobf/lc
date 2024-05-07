@@ -76,7 +76,12 @@ int(move_ball_after_collision_with_wall)(Ball *ball, Wall *wall) {
   }
 
   ball->vx = -ball->vx;
-  ball->x = wall->x + wall->w;
+  if(ball->vx > 0){
+    ball->x = wall->x + wall->w;
+  } else { 
+    ball->x = wall->x - ball->sprite->width;
+  }
+
   return 0;
 }
 
