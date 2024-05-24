@@ -90,6 +90,12 @@ void timer_game_handler() {
     move_ball_after_collision_with_wall(ball, wall_2);
   }
 
+  if (ball->x + ball->sprite->width >= wall_mouse->x && ball->x <= wall_mouse->x + wall_mouse->w && y >= wall_mouse->y && y <= wall_mouse->y + wall_mouse->h) {
+    // colisão da bola com a parede
+    score += multiplier;
+    move_ball_after_collision_with_wall(ball, wall_mouse);
+  }
+
   move_ball(ball, x_max, y_max);
   if (counter % speedup == 0 && !speedup_ball(ball)) {
     multiplier++;

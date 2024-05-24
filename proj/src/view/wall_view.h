@@ -13,9 +13,10 @@
  * @brief Wall drawer
  *
  * @param wall pointer to the wall to be drawn
+ * @param color color of the wall
  * @return Return 0 upon success and non-zero otherwise
  */
-int draw_wall(Wall *wall);
+int draw_wall(Wall *wall, uint32_t color);
 
 /**@}*/
 
