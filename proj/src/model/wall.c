@@ -46,6 +46,15 @@ int move_wall_down(Wall *wall, uint16_t y_max) {
   return 0;
 }
 
+int move_wall_y(Wall *wall, uint16_t y){
+  if (!wall) {
+    printf("%s: wall is NULL\n", __func__);
+    return 1;
+  }
+  wall->y = y;
+  return 0;
+}
+
 void destroy_wall(Wall *wall) {
   if (wall)
     free(wall);

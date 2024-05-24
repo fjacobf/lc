@@ -7,10 +7,18 @@
 #include "ball_view.h"
 #include "sprite_view.h"
 #include "wall_view.h"
+#include "cursor_view.h"
 
 extern Ball *ball;
 extern Wall *wall_1;
 extern Wall *wall_2;
+extern Wall *wall_mouse;
+extern Cursor *cursor_game;
+
+#define WALL_COLOR1 0xFFFF00
+#define WALL_COLOR2 0xA020F0
+#define WALL_COLOR_MOUSE 0xFF0000
+
 extern uint32_t score;
 extern uint8_t multiplier;
 
@@ -38,13 +46,18 @@ int draw_game() {
     return 1;
   }
 
-  if (draw_wall(wall_1)) {
+  if (draw_wall(wall_1, WALL_COLOR1)) {
     printf("%s: draw_wall(wall) error\n", __func__);
     return 1;
   }
 
-  if (draw_wall(wall_2)) {
+  if (draw_wall(wall_2, WALL_COLOR2)) {
     printf("%s: draw_wall(wall) error\n", __func__);
+    return 1;
+  }
+
+  if (draw_wall(wall_mouse, WALL_COLOR_MOUSE)) {
+    printf("%s: draw_wall(wall_mouse) error\n", __func__);
     return 1;
   }
 
