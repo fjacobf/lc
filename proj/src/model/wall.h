@@ -48,6 +48,15 @@ int move_wall_up(Wall *wall);
 int move_wall_down(Wall *wall, uint16_t y_max);
 
 /**
+ * @brief Moves wall according to y
+ *
+ * @param wall pointer to the wall to be moved
+ * @param y_max y coordinate of the mouse
+ * @return Return 0 upon success and non-zero otherwise
+ */
+int move_wall_y(Wall *wall, uint16_t y);
+
+/**
  * @brief Wall destructor
  *
  * @param wall pointer to the wall to be destroyed
