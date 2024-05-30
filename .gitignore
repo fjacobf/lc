@@ -2,3 +2,4 @@ setup_lcom_vm.sh
 *.txt
 *.o
 .gdbinit
+.vscode
