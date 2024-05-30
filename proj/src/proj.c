@@ -8,6 +8,7 @@
 #include "controller/mouse.h"
 #include "controller/video.h"
 #include <lcom/timer.h>
+#include "controller/rtc.h"
 
 #define FPS 60
 #define MODE 0x115
@@ -17,6 +18,7 @@ extern State state;
 uint8_t timer_irq_set;
 uint8_t keyboard_irq_set;
 uint8_t mouse_irq_set;
+uint8_t rtc_irq_set;
 
 int main(int argc, char *argv[]) {
   lcf_set_language("PT-PT");
@@ -82,6 +84,17 @@ int start() {
     return 1;
   }
 
+  if (rtc_subscribe_int(&rtc_irq_set)) {
+    printf("%s: rtc_subscribe_int(&rtc_irq_set) error\n", __func__);
+    return 1;
+  }
+
+  // Initialize the RTC to update every second
+  if (rtc_enable_update_interrupts()) {
+    printf("%s: rtc_enable_update_interrupts() error\n", __func__);
+    return 1;
+  }
+
   return 0;
 }
 
@@ -102,11 +115,13 @@ void loop() {
       switch (_ENDPOINT_P(msg.m_source)) {
         case HARDWARE:
           if (msg.m_notify.interrupts & BIT(timer_irq_set))
-            timer_interrupt_handler();
+            timer_int_handler();
           if (msg.m_notify.interrupts & BIT(keyboard_irq_set))
-            keyboard_interrupt_handler();
+            keyboard_int_handler();
           if (msg.m_notify.interrupts & BIT(mouse_irq_set))
-            mouse_interrupt_handler();
+            mouse_int_handler();
+          if (msg.m_notify.interrupts & BIT(rtc_irq_set))
+            rtc_int_handler();
       }
     }
   }
@@ -142,6 +157,11 @@ int end() {
 
   if (timer_unsubscribe_int()) {
     printf("%s: timer_unsubscribe_int() error\n", __func__);
+    return 1;
+  }
+
+  if (rtc_unsubscribe_int()) {
+    printf("%s: rtc_unsubscribe_int() error\n", __func__);
     return 1;
   }
 
