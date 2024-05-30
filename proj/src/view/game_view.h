@@ -20,6 +20,8 @@ int draw_game();
  */
 void update_time_on_screen();
 
+void draw_time(uint32_t hours, uint32_t minutes, uint32_t seconds, int x, int y);
+
 /**@}*/
 
 #endif /* _GAME_VIEW_H_ */

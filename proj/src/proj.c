@@ -115,11 +115,11 @@ void loop() {
       switch (_ENDPOINT_P(msg.m_source)) {
         case HARDWARE:
           if (msg.m_notify.interrupts & BIT(timer_irq_set))
-            timer_int_handler();
+            timer_interrupt_handler();
           if (msg.m_notify.interrupts & BIT(keyboard_irq_set))
-            keyboard_int_handler();
+            keyboard_interrupt_handler();
           if (msg.m_notify.interrupts & BIT(mouse_irq_set))
-            mouse_int_handler();
+            mouse_interrupt_handler();
           if (msg.m_notify.interrupts & BIT(rtc_irq_set))
             rtc_int_handler();
       }
