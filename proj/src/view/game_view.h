@@ -14,6 +14,12 @@
  */
 int draw_game();
 
+
+/**
+ * @brief Updates the time on the screen
+ */
+void update_time_on_screen();
+
 /**@}*/
 
 #endif /* _GAME_VIEW_H_ */
