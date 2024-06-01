@@ -19,7 +19,7 @@ extern uint16_t y_max;
 
 int draw_menu() {
 
-  if (draw_time(time_info.hours, (x_max * 0.5)-17, y_max * 0.5)) {
+  if (draw_time(time_info.hours, (x_max * 0.5)-25, y_max * 0.5)) {
     printf("error");
     return 1;
   }

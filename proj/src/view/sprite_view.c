@@ -19,6 +19,8 @@ extern Sprite *eight;
 extern Sprite *nine;
 extern Sprite *colon;
 extern Sprite *sunny;
+extern Sprite *sunset;
+extern Sprite *night;
 
 int draw_sprite(Sprite *sprite, uint16_t x, uint16_t y) {
   uint16_t height = sprite->height;
@@ -54,10 +56,32 @@ int draw_colon(uint16_t x, uint16_t y) {
   return 0;
 }
 
-int draw_sunny_background() {
-  if (draw_sprite(sunny, 0, 0)) {
-    printf("%s: draw_background error\n", __func__);
-    return 1;
+int draw_background(uint8_t number) {
+  switch (number)
+  {
+  case 1:
+    if (draw_sprite(sunny, 0, 0)) {
+      printf("%s: draw_background error\n", __func__);
+      return 1;
+    }
+    break;
+
+  case 2:
+    if (draw_sprite(sunset, 0, 0)) {
+      printf("%s: draw_background error\n", __func__);
+      return 1;
+    }
+    break;
+
+  case 3:
+    if (draw_sprite(night, 0, 0)) {
+      printf("%s: draw_background error\n", __func__);
+      return 1;
+    }
+    break;
+  
+  default:
+    break;
   }
   return 0;
 }

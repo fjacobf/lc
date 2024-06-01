@@ -148,7 +148,7 @@ bool check_game_over() {
   return false;
 }
 
-void end_game() {
+void end_game() { 
   destroy_ball(ball);
   destroy_wall(wall_1);
   destroy_wall(wall_2);

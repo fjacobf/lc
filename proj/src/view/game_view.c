@@ -21,6 +21,9 @@ extern real_time_info time_info;
 #define WALL_COLOR1 0xFFFF00
 #define WALL_COLOR2 0xFFA500
 #define WALL_COLOR_MOUSE 0xFF0000
+#define SUNNY_BACKGROUND 1
+#define SUNSET_BACKGROUND 2
+#define NIGHT_BACKGROUND 3
 
 extern uint32_t score;
 extern uint8_t multiplier;
@@ -30,8 +33,21 @@ extern uint16_t y_max;
 
 int draw_game() {
 
-  if(time_info.hours > 15 && time_info.hours < 19){
-    if (draw_sunny_background()) {
+  if(time_info.hours > 5 && time_info.hours < 18){
+    if (draw_background(SUNNY_BACKGROUND)) {
+      printf("%s: draw_background(x: 0, y: 0)\n", __func__);
+      return 1;
+    }
+  }
+
+  if(time_info.hours >= 18 && time_info.hours < 20){
+    if (draw_background(SUNSET_BACKGROUND)) {
+      printf("%s: draw_background(x: 0, y: 0)\n", __func__);
+      return 1;
+    }
+  }
+  if(time_info.hours >= 20 || time_info.hours <= 5){
+    if (draw_background(NIGHT_BACKGROUND)) {
       printf("%s: draw_background(x: 0, y: 0)\n", __func__);
       return 1;
     }

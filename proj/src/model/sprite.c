@@ -15,6 +15,8 @@
 #include "../xpm/x.xpm"
 #include "../xpm/colon.xpm"
 #include "../xpm/sunny.xpm"
+#include "../xpm/sunset.xpm"
+#include "../xpm/night.xpm"
 
 Sprite *zero;
 Sprite *one;
@@ -29,6 +31,8 @@ Sprite *nine;
 Sprite *times;
 Sprite *colon;
 Sprite *sunny;
+Sprite *sunset;
+Sprite *night;
 
 #define NUMBER_BACKGROUND 0xFFFFFF
 
@@ -161,9 +165,23 @@ int construct_background(){
     printf("%s: construct_sprite(zero_xpm, NUMBER_BACKGROUND: 0x%x) error\n", __func__, NUMBER_BACKGROUND);
     return 1;
   }
+
+  sunset = construct_sprite((xpm_map_t) sunset_xpm, NUMBER_BACKGROUND);
+  if (!sunset) {
+    printf("%s: construct_sprite(zero_xpm, NUMBER_BACKGROUND: 0x%x) error\n", __func__, NUMBER_BACKGROUND);
+    return 1;
+  }
+
+  night = construct_sprite((xpm_map_t) night_xpm, NUMBER_BACKGROUND);
+  if (!night) {
+    printf("%s: construct_sprite(zero_xpm, NUMBER_BACKGROUND: 0x%x) error\n", __func__, NUMBER_BACKGROUND);
+    return 1;
+  }
   return 0;
 }
 
 void destroy_background(){
   destroy_sprite(sunny);
+  destroy_sprite(sunset);
+  destroy_sprite(night);
 }

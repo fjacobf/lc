@@ -69,10 +69,10 @@ int draw_colon(uint16_t x, uint16_t y);
 
 /**
  * @brief draws the background
- *
+ * @param number option to select the background to be drawn
  * @return Return 0 upon success and non-zero otherwise
  */
-int draw_sunny_background();
+int draw_background(uint8_t number);
 /**@}*/
 
 #endif /* _SPRITE_VIEW_H_ */
