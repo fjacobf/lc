@@ -8,12 +8,15 @@
 #include "sprite_view.h"
 #include "wall_view.h"
 #include "cursor_view.h"
+#include "controller/rtc.h"
+
 
 extern Ball *ball;
 extern Wall *wall_1;
 extern Wall *wall_2;
 extern Wall *wall_mouse;
 extern Cursor *cursor_game;
+extern real_time_info time_info; 
 
 #define WALL_COLOR1 0xFFFF00
 #define WALL_COLOR2 0xFFA500
@@ -27,9 +30,11 @@ extern uint16_t y_max;
 
 int draw_game() {
 
-  if (draw_sunny_background()) {
-    printf("%s: draw_times(x_max * 0.05: %f, y_max * 0.05: %f)\n", __func__, x_max * 0.05, y_max * 0.05);
-    return 1;
+  if(time_info.hours > 15 && time_info.hours < 19){
+    if (draw_sunny_background()) {
+      printf("%s: draw_background(x: 0, y: 0)\n", __func__);
+      return 1;
+    }
   }
 
   if (draw_times(x_max * 0.05, y_max * 0.05)) {

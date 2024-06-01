@@ -3,7 +3,8 @@
     "keyboard.h": "c",
     "sprite_view.h": "c",
     "sprite.h": "c",
-    "rtc.h": "c"
+    "rtc.h": "c",
+    "chrono": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "C_Cpp_Runner.msvcBatchPath": "",
