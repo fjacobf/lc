@@ -177,10 +177,17 @@ int(video_draw_hline)(uint16_t x, uint16_t y, uint16_t len, uint32_t color) {
 }
 
 int(video_draw_rectangle)(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint32_t color) {
+  int roundness = 3;
   for (uint16_t i = 0; i < height; i++) {
-    if (video_draw_hline(x, y + i, width, color)) {
+    if (video_draw_hline(x+roundness, y + i, width-2*roundness, color)) {
       printf("%s: video_draw_hline(x: %d, y + i: %d, width: %d, color: %d) error\n", __func__, x, y + i, width, color);
       return 1;
+    }
+    if(i<3){
+      roundness--;
+    }
+    if(i>=height-3){
+      roundness++;
     }
   }
   return 0;
