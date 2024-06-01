@@ -1,0 +1,50 @@
+\doxysection{src/controller/keyboard.c File Reference}
+\hypertarget{keyboard_8c}{}\label{keyboard_8c}\index{src/controller/keyboard.c@{src/controller/keyboard.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}keyboard.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_ga8eee4d0a15beada731a514481b5ad4bf}{keyboard\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables keyboard interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_gac95aea27a5e91b363b876fed881f368f}{keyboard\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} (keyboard\+\_\+read\+\_\+scancode\+\_\+byte())
+\begin{DoxyCompactList}\small\item\em Reads the scancode byte from the output buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__keyboard_gab9e6ed7960d60aa4834f2038247d4536}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} (\mbox{\hyperlink{group__keyboard_ga67de9d1e2429d220c07608449d54ebe0}{keyboard\+\_\+restore}}())
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_ga1944fd3a1e8c15001ab35dc85ea5c745}{keyboard\+\_\+enable\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Enables keyboard interrupts, by writing an appropriate KBC command byte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structscancode}{scancode}} \mbox{\hyperlink{keyboard_8c_a0076527ee56df980d736e3ef2e762c6b}{code}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{keyboard_8c_a3296e1ce9cbd53539f45325e91d9785a}{keyboard\+\_\+hook\+\_\+id}} = \mbox{\hyperlink{group__i8042_ga2d17911b50c0aeebb2e3325c5b36d4f2}{KEYBOARD\+\_\+\+IRQ}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}\index{keyboard.c@{keyboard.c}!void@{void}}
+\index{void@{void}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{void()}{void()}}
+{\footnotesize\ttfamily \label{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3} 
+void (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__keyboard_ga67de9d1e2429d220c07608449d54ebe0}{keyboard\+\_\+restore}}()}]{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{keyboard_8c_a0076527ee56df980d736e3ef2e762c6b}\index{keyboard.c@{keyboard.c}!code@{code}}
+\index{code@{code}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily \label{keyboard_8c_a0076527ee56df980d736e3ef2e762c6b} 
+\mbox{\hyperlink{structscancode}{scancode}} code}
+
+\Hypertarget{keyboard_8c_a3296e1ce9cbd53539f45325e91d9785a}\index{keyboard.c@{keyboard.c}!keyboard\_hook\_id@{keyboard\_hook\_id}}
+\index{keyboard\_hook\_id@{keyboard\_hook\_id}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_hook\_id}{keyboard\_hook\_id}}
+{\footnotesize\ttfamily \label{keyboard_8c_a3296e1ce9cbd53539f45325e91d9785a} 
+int32\+\_\+t keyboard\+\_\+hook\+\_\+id = \mbox{\hyperlink{group__i8042_ga2d17911b50c0aeebb2e3325c5b36d4f2}{KEYBOARD\+\_\+\+IRQ}}}
+

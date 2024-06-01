@@ -1,0 +1,111 @@
+\doxysection{src/controller/rtc.c File Reference}
+\hypertarget{rtc_8c}{}\label{rtc_8c}\index{src/controller/rtc.c@{src/controller/rtc.c}}
+{\ttfamily \#include "{}rtc.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{rtc_8c_a9e961a2e8e8309e4fd490ac35f68a293}{rtc\+\_\+setup}} ()
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_abb90a7b2307300874b2529d94aafacca}{rtc\+\_\+subscribe\+\_\+interrupts}} ()
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_ae0e5cb47db8832528abb7dc48255cd3a}{rtc\+\_\+unsubscribe\+\_\+interrupts}} ()
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_a8e4030507a3afad53e5b80851f90d193}{rtc\+\_\+output}} (uint8\+\_\+t command, uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_a47d5762e49eb390b04a09fc319c4e047}{rtc\+\_\+is\+\_\+updating}} ()
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_a5873dc86f56c4a2a8ea8f7faf07ef798}{rtc\+\_\+is\+\_\+binary}} ()
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_ad9799f13e0670cb1748baae02f15ca5a}{rtc\+\_\+is\+\_\+bcd}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_a891509fed13e0cac396e9c401f887d72}{to\+\_\+binary}} (uint8\+\_\+t bcd\+\_\+number)
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_ae22bdeb51eb630e1d579dfc1cd1b2f11}{rtc\+\_\+update\+\_\+time}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}{rtc\+\_\+hook\+\_\+id}} = \mbox{\hyperlink{rtc_8h_ab54f2d18b47b47a59f718e16099446e8}{RTC\+\_\+\+MASK}}
+\item 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} \mbox{\hyperlink{rtc_8c_ae4d8e969edb29d761dc83769f4221979}{time\+\_\+info}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{rtc_8c_ac8468ecd00b49ebbf2afd70ff8cb6c36}{binary\+\_\+mode}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{rtc_8c_ad9799f13e0670cb1748baae02f15ca5a}\index{rtc.c@{rtc.c}!rtc\_is\_bcd@{rtc\_is\_bcd}}
+\index{rtc\_is\_bcd@{rtc\_is\_bcd}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_is\_bcd()}{rtc\_is\_bcd()}}
+{\footnotesize\ttfamily \label{rtc_8c_ad9799f13e0670cb1748baae02f15ca5a} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+is\+\_\+bcd (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_a5873dc86f56c4a2a8ea8f7faf07ef798}\index{rtc.c@{rtc.c}!rtc\_is\_binary@{rtc\_is\_binary}}
+\index{rtc\_is\_binary@{rtc\_is\_binary}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_is\_binary()}{rtc\_is\_binary()}}
+{\footnotesize\ttfamily \label{rtc_8c_a5873dc86f56c4a2a8ea8f7faf07ef798} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+is\+\_\+binary (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_a47d5762e49eb390b04a09fc319c4e047}\index{rtc.c@{rtc.c}!rtc\_is\_updating@{rtc\_is\_updating}}
+\index{rtc\_is\_updating@{rtc\_is\_updating}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_is\_updating()}{rtc\_is\_updating()}}
+{\footnotesize\ttfamily \label{rtc_8c_a47d5762e49eb390b04a09fc319c4e047} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+is\+\_\+updating (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_a8e4030507a3afad53e5b80851f90d193}\index{rtc.c@{rtc.c}!rtc\_output@{rtc\_output}}
+\index{rtc\_output@{rtc\_output}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_output()}{rtc\_output()}}
+{\footnotesize\ttfamily \label{rtc_8c_a8e4030507a3afad53e5b80851f90d193} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+output (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_a9e961a2e8e8309e4fd490ac35f68a293}\index{rtc.c@{rtc.c}!rtc\_setup@{rtc\_setup}}
+\index{rtc\_setup@{rtc\_setup}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_setup()}{rtc\_setup()}}
+{\footnotesize\ttfamily \label{rtc_8c_a9e961a2e8e8309e4fd490ac35f68a293} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} rtc\+\_\+setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_abb90a7b2307300874b2529d94aafacca}\index{rtc.c@{rtc.c}!rtc\_subscribe\_interrupts@{rtc\_subscribe\_interrupts}}
+\index{rtc\_subscribe\_interrupts@{rtc\_subscribe\_interrupts}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_subscribe\_interrupts()}{rtc\_subscribe\_interrupts()}}
+{\footnotesize\ttfamily \label{rtc_8c_abb90a7b2307300874b2529d94aafacca} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+subscribe\+\_\+interrupts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_ae0e5cb47db8832528abb7dc48255cd3a}\index{rtc.c@{rtc.c}!rtc\_unsubscribe\_interrupts@{rtc\_unsubscribe\_interrupts}}
+\index{rtc\_unsubscribe\_interrupts@{rtc\_unsubscribe\_interrupts}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_unsubscribe\_interrupts()}{rtc\_unsubscribe\_interrupts()}}
+{\footnotesize\ttfamily \label{rtc_8c_ae0e5cb47db8832528abb7dc48255cd3a} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+unsubscribe\+\_\+interrupts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_ae22bdeb51eb630e1d579dfc1cd1b2f11}\index{rtc.c@{rtc.c}!rtc\_update\_time@{rtc\_update\_time}}
+\index{rtc\_update\_time@{rtc\_update\_time}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_update\_time()}{rtc\_update\_time()}}
+{\footnotesize\ttfamily \label{rtc_8c_ae22bdeb51eb630e1d579dfc1cd1b2f11} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+update\+\_\+time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{rtc_8c_a891509fed13e0cac396e9c401f887d72}\index{rtc.c@{rtc.c}!to\_binary@{to\_binary}}
+\index{to\_binary@{to\_binary}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{to\_binary()}{to\_binary()}}
+{\footnotesize\ttfamily \label{rtc_8c_a891509fed13e0cac396e9c401f887d72} 
+uint8\+\_\+t to\+\_\+binary (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{bcd\+\_\+number}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{rtc_8c_ac8468ecd00b49ebbf2afd70ff8cb6c36}\index{rtc.c@{rtc.c}!binary\_mode@{binary\_mode}}
+\index{binary\_mode@{binary\_mode}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{binary\_mode}{binary\_mode}}
+{\footnotesize\ttfamily \label{rtc_8c_ac8468ecd00b49ebbf2afd70ff8cb6c36} 
+uint8\+\_\+t binary\+\_\+mode}
+
+\Hypertarget{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}\index{rtc.c@{rtc.c}!rtc\_hook\_id@{rtc\_hook\_id}}
+\index{rtc\_hook\_id@{rtc\_hook\_id}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_hook\_id}{rtc\_hook\_id}}
+{\footnotesize\ttfamily \label{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} rtc\+\_\+hook\+\_\+id = \mbox{\hyperlink{rtc_8h_ab54f2d18b47b47a59f718e16099446e8}{RTC\+\_\+\+MASK}}}
+
+\Hypertarget{rtc_8c_ae4d8e969edb29d761dc83769f4221979}\index{rtc.c@{rtc.c}!time\_info@{time\_info}}
+\index{time\_info@{time\_info}!rtc.c@{rtc.c}}
+\doxysubsubsection{\texorpdfstring{time\_info}{time\_info}}
+{\footnotesize\ttfamily \label{rtc_8c_ae4d8e969edb29d761dc83769f4221979} 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} time\+\_\+info}
+

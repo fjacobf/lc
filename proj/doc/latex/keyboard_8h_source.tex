@@ -1,0 +1,33 @@
+\doxysection{keyboard.\+h}
+\hypertarget{keyboard_8h_source}{}\label{keyboard_8h_source}\index{src/controller/keyboard.h@{src/controller/keyboard.h}}
+\mbox{\hyperlink{keyboard_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_KEYBOARD\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_KEYBOARD\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{kbc_8h}{kbc.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structscancode_a83b83f0755f115b133c5afa21cbcfd1b}{makecode}};\ \ \ \ }
+\DoxyCodeLine{00020\ \ \ uint8\_t\ \mbox{\hyperlink{structscancode_ae5dc6ffcd9b7605c7787791e40cc6bb0}{size}};\ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ uint8\_t\ bytes[2];\ }
+\DoxyCodeLine{00022\ \}\ \mbox{\hyperlink{structscancode}{scancode}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00030\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__keyboard_ga8eee4d0a15beada731a514481b5ad4bf}{keyboard\_subscribe\_int}})(uint8\_t\ *bit\_no);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__keyboard_gac95aea27a5e91b363b876fed881f368f}{keyboard\_unsubscribe\_int}})();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(keyboard\_read\_scancode\_byte());}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}}(\mbox{\hyperlink{group__keyboard_gab9e6ed7960d60aa4834f2038247d4536}{kbc\_ih}})();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}}(\mbox{\hyperlink{group__keyboard_ga67de9d1e2429d220c07608449d54ebe0}{keyboard\_restore}})();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__keyboard_ga1944fd3a1e8c15001ab35dc85ea5c745}{keyboard\_enable\_interrupts}})();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_KEYBOARD\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

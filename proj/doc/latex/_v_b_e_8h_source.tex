@@ -1,0 +1,34 @@
+\doxysection{VBE.\+h}
+\hypertarget{_v_b_e_8h_source}{}\label{_v_b_e_8h_source}\index{src/controller/VBE.h@{src/controller/VBE.h}}
+\mbox{\hyperlink{_v_b_e_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_VBE\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_VBE\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ VBE\_INTNO\ 0x10\ \ }}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ VBE\_REG\_AH\ 0x4F\ }}
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ VBE\ return\ codes\ */}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ VBE\_FUNCTION\_SUPPORTED\_AL\ 0x4F\ \ \ }}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ VBE\_FUNCTION\_SUCCESS\_AH\ 0x00\ \ \ \ \ }}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ VBE\_FUNCTION\_FAILED\_AH\ 0x01\ \ \ \ \ \ }}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ VBE\_FUNCTION\_UNSUPPORTED\_AH\ 0x02\ }}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ VBE\_FUNCTION\_INVALID\_AH\ 0x03\ \ \ \ \ }}
+\DoxyCodeLine{00021\ \textcolor{comment}{/*\ VBE\ functions\ */}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ VBE\_RETURN\_CONTROLLER\_INFO\ 0x00\ }}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ VBE\_RETURN\_MODE\_INFO\ 0x01\ \ \ \ \ \ \ }}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ VBE\_SET\_MODE\ 0x02\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ VBE\_SET\_GET\_DISPLAY\_START\ 0x07\ \ }}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ VBE\_SET\_DISPLAY\_START\ 0x00\ \ \ \ \ \ }}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ VBE\_GET\_DISPLAY\_START\ 0x01\ \ \ \ \ \ }}
+\DoxyCodeLine{00030\ \textcolor{comment}{/*\ Other\ */}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ VBE\_SET\_LINEAR\_MODE\ BIT(14)\ \ \ \ \ }}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ VBE\_RETURN\_TO\_TEXT\_MODE\_AH\ 0x00\ }}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ VBE\_RETURN\_TO\_TEXT\_MODE\_AL\ 0x03\ }}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ VBE\_INDEXED\_COLOR\_MODE\ 0x105\ \ \ \ }}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ VBE\_RESERVED\ 0x00\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_VBE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,111 @@
+\doxysection{kbc}
+\hypertarget{group__kbc}{}\label{group__kbc}\index{kbc@{kbc}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_gaa4c58a11cd49c54cc0eb02a79010a9cc}{kbc\+\_\+read\+\_\+status}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}status)
+\begin{DoxyCompactList}\small\item\em Reads the KBC status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_ga050ee267f4e1632e5dc63f9d417cbe63}{kbc\+\_\+read\+\_\+output}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Reads the KBC output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_ga4b3b58e85c37ff92d8059434f3682e06}{kbc\+\_\+read\+\_\+acknowledgment\+\_\+byte}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}acknowledgment\+\_\+byte)
+\begin{DoxyCompactList}\small\item\em Reads the KBC acknowledgment byte from the output buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_ga8c467e640bc33719fe3ed7bcb73f2121}{kbc\+\_\+write\+\_\+command}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em Writes command to KBC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_gae6787b849333ea950edf3f7fe12bf190}{kbc\+\_\+write\+\_\+argument}} (uint8\+\_\+t argument)
+\begin{DoxyCompactList}\small\item\em Writes argument to KBC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for using the i8042 KBC 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__kbc_ga4b3b58e85c37ff92d8059434f3682e06}\index{kbc@{kbc}!kbc\_read\_acknowledgment\_byte@{kbc\_read\_acknowledgment\_byte}}
+\index{kbc\_read\_acknowledgment\_byte@{kbc\_read\_acknowledgment\_byte}!kbc@{kbc}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_acknowledgment\_byte()}{kbc\_read\_acknowledgment\_byte()}}
+{\footnotesize\ttfamily \label{group__kbc_ga4b3b58e85c37ff92d8059434f3682e06} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} kbc\+\_\+read\+\_\+acknowledgment\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{acknowledgment\+\_\+byte}{}\end{DoxyParamCaption})}
+
+
+
+Reads the KBC acknowledgment byte from the output buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em acknowledgment\+\_\+byte} & address of memory position to be filled with the KBC acknowledgment byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__kbc_ga050ee267f4e1632e5dc63f9d417cbe63}\index{kbc@{kbc}!kbc\_read\_output@{kbc\_read\_output}}
+\index{kbc\_read\_output@{kbc\_read\_output}!kbc@{kbc}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_output()}{kbc\_read\_output()}}
+{\footnotesize\ttfamily \label{group__kbc_ga050ee267f4e1632e5dc63f9d417cbe63} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} kbc\+\_\+read\+\_\+output (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{output}{}\end{DoxyParamCaption})}
+
+
+
+Reads the KBC output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & address of memory position to be filled with the KBC output \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise (-\/1 if invalid data, 1 if internal error, 2 if exceeded maximum number of attempts to read KBC output) 
+\end{DoxyReturn}
+\Hypertarget{group__kbc_gaa4c58a11cd49c54cc0eb02a79010a9cc}\index{kbc@{kbc}!kbc\_read\_status@{kbc\_read\_status}}
+\index{kbc\_read\_status@{kbc\_read\_status}!kbc@{kbc}}
+\doxysubsubsection{\texorpdfstring{kbc\_read\_status()}{kbc\_read\_status()}}
+{\footnotesize\ttfamily \label{group__kbc_gaa4c58a11cd49c54cc0eb02a79010a9cc} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} kbc\+\_\+read\+\_\+status (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{status}{}\end{DoxyParamCaption})}
+
+
+
+Reads the KBC status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & address of memory position to be filled with the KBC status \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__kbc_gae6787b849333ea950edf3f7fe12bf190}\index{kbc@{kbc}!kbc\_write\_argument@{kbc\_write\_argument}}
+\index{kbc\_write\_argument@{kbc\_write\_argument}!kbc@{kbc}}
+\doxysubsubsection{\texorpdfstring{kbc\_write\_argument()}{kbc\_write\_argument()}}
+{\footnotesize\ttfamily \label{group__kbc_gae6787b849333ea950edf3f7fe12bf190} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} kbc\+\_\+write\+\_\+argument (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{argument}{}\end{DoxyParamCaption})}
+
+
+
+Writes argument to KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argument} & argument to be written to KBC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise (1 if internal error, 2 if exceeded maximum number of attempts to write argument to KBC) 
+\end{DoxyReturn}
+\Hypertarget{group__kbc_ga8c467e640bc33719fe3ed7bcb73f2121}\index{kbc@{kbc}!kbc\_write\_command@{kbc\_write\_command}}
+\index{kbc\_write\_command@{kbc\_write\_command}!kbc@{kbc}}
+\doxysubsubsection{\texorpdfstring{kbc\_write\_command()}{kbc\_write\_command()}}
+{\footnotesize\ttfamily \label{group__kbc_ga8c467e640bc33719fe3ed7bcb73f2121} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} kbc\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command}{}\end{DoxyParamCaption})}
+
+
+
+Writes command to KBC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & command to be written to KBC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise (1 if internal error, 2 if exceeded maximum number of attempts to write command to KBC) 
+\end{DoxyReturn}

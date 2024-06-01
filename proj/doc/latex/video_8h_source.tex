@@ -1,0 +1,43 @@
+\doxysection{video.\+h}
+\hypertarget{video_8h_source}{}\label{video_8h_source}\index{src/controller/video.h@{src/controller/video.h}}
+\mbox{\hyperlink{video_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_VIDEO\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_VIDEO\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <lcom/vbe.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ vbe\_mode\_info\_t\ \mbox{\hyperlink{group__video_ga26081be7a771e5c611b33f15caaf831e}{vmi\_p}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00021\ \ \ uint8\_t\ \mbox{\hyperlink{structrgb__8__8__8__t_ad47d918910aaa51c73160ac85999d09c}{red}};\ \ \ }
+\DoxyCodeLine{00022\ \ \ uint8\_t\ \mbox{\hyperlink{structrgb__8__8__8__t_a90d21fa503b626c00cdc8d94863d5877}{green}};\ }
+\DoxyCodeLine{00023\ \ \ uint8\_t\ \mbox{\hyperlink{structrgb__8__8__8__t_a287b397e90d7b995c81ff54e741f96b2}{blue}};\ \ }
+\DoxyCodeLine{00024\ \}\ \mbox{\hyperlink{structrgb__8__8__8__t}{rgb\_8\_8\_8\_t}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ *(\mbox{\hyperlink{group__video_gad021472c218950128a8a15d71baa3613}{video\_init}})\ (uint16\_t\ mode);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00043\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__video_ga7c9f8f13c9ef9722e457bced9a38368a}{video\_swap\_buffers}})();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00051\ \mbox{\hyperlink{structrgb__8__8__8__t}{rgb\_8\_8\_8\_t}}(\mbox{\hyperlink{group__video_ga2599db574d74ecb6bca8ee11fe913335}{video\_get\_colors}})(uint32\_t\ color);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00059\ uint32\_t(\mbox{\hyperlink{group__video_gafa5c65c944e8e3413bd5598c82f5c83a}{video\_get\_color}})(\mbox{\hyperlink{structrgb__8__8__8__t}{rgb\_8\_8\_8\_t}}\ colors);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00069\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__video_gab4aec56dce587e9490b392f96f1592b2}{video\_draw\_pixel}})(uint16\_t\ \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}},\ uint16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}},\ uint32\_t\ color);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00086\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__video_gaf244fd547ec570d4845bdd8fa56dfc3a}{video\_draw\_hline}})(uint16\_t\ \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}},\ uint16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}},\ uint16\_t\ len,\ uint32\_t\ color);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00103\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__video_gad5ac1bdbd4afc4adfedb5330480f6243}{video\_draw\_rectangle}})(uint16\_t\ \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}},\ uint16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}},\ uint16\_t\ width,\ uint16\_t\ height,\ uint32\_t\ color);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00113\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__video_gafb146a1228a170418116745e5173e972}{video\_draw\_pixmap}})(uint16\_t\ \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}},\ uint16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}},\ xpm\_image\_t\ *image);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00124\ \mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}(\mbox{\hyperlink{group__video_gaa5680f6effb6db454cf906f8b0cc9f6e}{video\_clean}})(uint16\_t\ xi,\ uint16\_t\ yi,\ uint16\_t\ xf,\ uint16\_t\ yf);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__video_ga9c7bef222d97bc81a5f81abd20c06ffb}{video\_draw\_background}}(uint32\_t\ color);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00136\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_VIDEO\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

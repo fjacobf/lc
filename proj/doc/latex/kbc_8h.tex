@@ -1,0 +1,18 @@
+\doxysection{src/controller/kbc.h File Reference}
+\hypertarget{kbc_8h}{}\label{kbc_8h}\index{src/controller/kbc.h@{src/controller/kbc.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}i8042.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_gaa4c58a11cd49c54cc0eb02a79010a9cc}{kbc\+\_\+read\+\_\+status}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}status)
+\begin{DoxyCompactList}\small\item\em Reads the KBC status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_ga050ee267f4e1632e5dc63f9d417cbe63}{kbc\+\_\+read\+\_\+output}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}output)
+\begin{DoxyCompactList}\small\item\em Reads the KBC output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_ga4b3b58e85c37ff92d8059434f3682e06}{kbc\+\_\+read\+\_\+acknowledgment\+\_\+byte}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}acknowledgment\+\_\+byte)
+\begin{DoxyCompactList}\small\item\em Reads the KBC acknowledgment byte from the output buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_ga8c467e640bc33719fe3ed7bcb73f2121}{kbc\+\_\+write\+\_\+command}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em Writes command to KBC. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__kbc_gae6787b849333ea950edf3f7fe12bf190}{kbc\+\_\+write\+\_\+argument}} (uint8\+\_\+t argument)
+\begin{DoxyCompactList}\small\item\em Writes argument to KBC. \end{DoxyCompactList}\end{DoxyCompactItemize}

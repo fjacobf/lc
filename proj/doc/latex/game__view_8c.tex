@@ -1,0 +1,131 @@
+\doxysection{src/view/game\+\_\+view.c File Reference}
+\hypertarget{game__view_8c}{}\label{game__view_8c}\index{src/view/game\_view.c@{src/view/game\_view.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}game\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}../model/game.\+h"{}}\newline
+{\ttfamily \#include "{}ball\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}sprite\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}wall\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}cursor\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}controller/rtc.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game__view_8c_adc74ec7bcf1549bd93d7d6fa9ff3f412}{WALL\+\_\+\+COLOR1}}~0x\+FFFF00
+\item 
+\#define \mbox{\hyperlink{game__view_8c_a55ae5e6cf6675098fd2359280fc99e07}{WALL\+\_\+\+COLOR2}}~0x\+FFA500
+\item 
+\#define \mbox{\hyperlink{game__view_8c_a69ffea610b0db2b098c1f6ad019c7f41}{WALL\+\_\+\+COLOR\+\_\+\+MOUSE}}~0x\+FF0000
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__game__view_ga3cef68220fcc611902108d6f0159e50f}{draw\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Draws the game (in the current state) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_aacc87c0b27b8412049520b1498472156}{ball}}
+\item 
+\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_af8d1fddcfa5e1d17fc2638df929f0413}{wall\+\_\+1}}
+\item 
+\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_ad449969679958f7fc418f1362405238f}{wall\+\_\+2}}
+\item 
+\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_ac502b0a7905314293fde1a26b71dad53}{wall\+\_\+mouse}}
+\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{game__view_8c_ad1c546824081ef3d5fd2bb2904927842}{cursor\+\_\+game}}
+\item 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} \mbox{\hyperlink{game__view_8c_ae4d8e969edb29d761dc83769f4221979}{time\+\_\+info}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{game__view_8c_abe902382ebcf927bbba5c0d47bf53138}{score}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{game__view_8c_a17a5f8c47469ce460f2ff79a548d2ada}{multiplier}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{game__view_8c_a85cc0f4334633f7f998e2d55e15aa948}{x\+\_\+max}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{game__view_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}{y\+\_\+max}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{game__view_8c_adc74ec7bcf1549bd93d7d6fa9ff3f412}\index{game\_view.c@{game\_view.c}!WALL\_COLOR1@{WALL\_COLOR1}}
+\index{WALL\_COLOR1@{WALL\_COLOR1}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{WALL\_COLOR1}{WALL\_COLOR1}}
+{\footnotesize\ttfamily \label{game__view_8c_adc74ec7bcf1549bd93d7d6fa9ff3f412} 
+\#define WALL\+\_\+\+COLOR1~0x\+FFFF00}
+
+\Hypertarget{game__view_8c_a55ae5e6cf6675098fd2359280fc99e07}\index{game\_view.c@{game\_view.c}!WALL\_COLOR2@{WALL\_COLOR2}}
+\index{WALL\_COLOR2@{WALL\_COLOR2}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{WALL\_COLOR2}{WALL\_COLOR2}}
+{\footnotesize\ttfamily \label{game__view_8c_a55ae5e6cf6675098fd2359280fc99e07} 
+\#define WALL\+\_\+\+COLOR2~0x\+FFA500}
+
+\Hypertarget{game__view_8c_a69ffea610b0db2b098c1f6ad019c7f41}\index{game\_view.c@{game\_view.c}!WALL\_COLOR\_MOUSE@{WALL\_COLOR\_MOUSE}}
+\index{WALL\_COLOR\_MOUSE@{WALL\_COLOR\_MOUSE}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{WALL\_COLOR\_MOUSE}{WALL\_COLOR\_MOUSE}}
+{\footnotesize\ttfamily \label{game__view_8c_a69ffea610b0db2b098c1f6ad019c7f41} 
+\#define WALL\+\_\+\+COLOR\+\_\+\+MOUSE~0x\+FF0000}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{game__view_8c_aacc87c0b27b8412049520b1498472156}\index{game\_view.c@{game\_view.c}!ball@{ball}}
+\index{ball@{ball}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{ball}{ball}}
+{\footnotesize\ttfamily \label{game__view_8c_aacc87c0b27b8412049520b1498472156} 
+\mbox{\hyperlink{struct_ball}{Ball}}\texorpdfstring{$\ast$}{*} ball\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_ad1c546824081ef3d5fd2bb2904927842}\index{game\_view.c@{game\_view.c}!cursor\_game@{cursor\_game}}
+\index{cursor\_game@{cursor\_game}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{cursor\_game}{cursor\_game}}
+{\footnotesize\ttfamily \label{game__view_8c_ad1c546824081ef3d5fd2bb2904927842} 
+\mbox{\hyperlink{struct_cursor}{Cursor}}\texorpdfstring{$\ast$}{*} cursor\+\_\+game\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_a17a5f8c47469ce460f2ff79a548d2ada}\index{game\_view.c@{game\_view.c}!multiplier@{multiplier}}
+\index{multiplier@{multiplier}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{multiplier}{multiplier}}
+{\footnotesize\ttfamily \label{game__view_8c_a17a5f8c47469ce460f2ff79a548d2ada} 
+uint8\+\_\+t multiplier\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_abe902382ebcf927bbba5c0d47bf53138}\index{game\_view.c@{game\_view.c}!score@{score}}
+\index{score@{score}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{game__view_8c_abe902382ebcf927bbba5c0d47bf53138} 
+uint32\+\_\+t score\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_ae4d8e969edb29d761dc83769f4221979}\index{game\_view.c@{game\_view.c}!time\_info@{time\_info}}
+\index{time\_info@{time\_info}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{time\_info}{time\_info}}
+{\footnotesize\ttfamily \label{game__view_8c_ae4d8e969edb29d761dc83769f4221979} 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} time\+\_\+info\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_af8d1fddcfa5e1d17fc2638df929f0413}\index{game\_view.c@{game\_view.c}!wall\_1@{wall\_1}}
+\index{wall\_1@{wall\_1}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{wall\_1}{wall\_1}}
+{\footnotesize\ttfamily \label{game__view_8c_af8d1fddcfa5e1d17fc2638df929f0413} 
+\mbox{\hyperlink{struct_wall}{Wall}}\texorpdfstring{$\ast$}{*} wall\+\_\+1\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_ad449969679958f7fc418f1362405238f}\index{game\_view.c@{game\_view.c}!wall\_2@{wall\_2}}
+\index{wall\_2@{wall\_2}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{wall\_2}{wall\_2}}
+{\footnotesize\ttfamily \label{game__view_8c_ad449969679958f7fc418f1362405238f} 
+\mbox{\hyperlink{struct_wall}{Wall}}\texorpdfstring{$\ast$}{*} wall\+\_\+2\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_ac502b0a7905314293fde1a26b71dad53}\index{game\_view.c@{game\_view.c}!wall\_mouse@{wall\_mouse}}
+\index{wall\_mouse@{wall\_mouse}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{wall\_mouse}{wall\_mouse}}
+{\footnotesize\ttfamily \label{game__view_8c_ac502b0a7905314293fde1a26b71dad53} 
+\mbox{\hyperlink{struct_wall}{Wall}}\texorpdfstring{$\ast$}{*} wall\+\_\+mouse\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_a85cc0f4334633f7f998e2d55e15aa948}\index{game\_view.c@{game\_view.c}!x\_max@{x\_max}}
+\index{x\_max@{x\_max}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{x\_max}{x\_max}}
+{\footnotesize\ttfamily \label{game__view_8c_a85cc0f4334633f7f998e2d55e15aa948} 
+uint16\+\_\+t x\+\_\+max\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{game__view_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}\index{game\_view.c@{game\_view.c}!y\_max@{y\_max}}
+\index{y\_max@{y\_max}!game\_view.c@{game\_view.c}}
+\doxysubsubsection{\texorpdfstring{y\_max}{y\_max}}
+{\footnotesize\ttfamily \label{game__view_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc} 
+uint16\+\_\+t y\+\_\+max\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,116 @@
+\doxysection{levels}
+\hypertarget{group__levels}{}\label{group__levels}\index{levels@{levels}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__levels_gae00eca1f6cb677fde14a0daf395d2b69}{start\+\_\+levels}} (uint16\+\_\+t x\+Resolution, uint16\+\_\+t y\+Resolution)
+\begin{DoxyCompactList}\small\item\em Starts the levels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__levels_gab74c6d19d713ea1b4ebb7cb6b0341872}{keyboard\+\_\+levels\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the keyboard when in the levels state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__levels_gad61df0eb5337b0c685d47297b606a688}{mouse\+\_\+levels\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the mouse when in the levels state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__levels_ga1f470ca50eab9548d5bc64810c9197f1}{check\+\_\+easy}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the easy button is selected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__levels_gadb6c7a5b773c1d6bd2f23a36812eac87}{check\+\_\+medium}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the medium button is selected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__levels_ga5630c6c6a7517ddccbd9d438b56786bd}{check\+\_\+hard}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the hard button is selected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__levels_gac47f2fd2fe3da54acf16194c52f3f75b}{end\+\_\+levels}} ()
+\begin{DoxyCompactList}\small\item\em Ends the levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to the levels 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__levels_ga1f470ca50eab9548d5bc64810c9197f1}\index{levels@{levels}!check\_easy@{check\_easy}}
+\index{check\_easy@{check\_easy}!levels@{levels}}
+\doxysubsubsection{\texorpdfstring{check\_easy()}{check\_easy()}}
+{\footnotesize\ttfamily \label{group__levels_ga1f470ca50eab9548d5bc64810c9197f1} 
+bool check\+\_\+easy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the easy button is selected. 
+
+\begin{DoxyReturn}{Returns}
+Return true if the easy button is selected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__levels_ga5630c6c6a7517ddccbd9d438b56786bd}\index{levels@{levels}!check\_hard@{check\_hard}}
+\index{check\_hard@{check\_hard}!levels@{levels}}
+\doxysubsubsection{\texorpdfstring{check\_hard()}{check\_hard()}}
+{\footnotesize\ttfamily \label{group__levels_ga5630c6c6a7517ddccbd9d438b56786bd} 
+bool check\+\_\+hard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the hard button is selected. 
+
+\begin{DoxyReturn}{Returns}
+Return true if the hard button is selected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__levels_gadb6c7a5b773c1d6bd2f23a36812eac87}\index{levels@{levels}!check\_medium@{check\_medium}}
+\index{check\_medium@{check\_medium}!levels@{levels}}
+\doxysubsubsection{\texorpdfstring{check\_medium()}{check\_medium()}}
+{\footnotesize\ttfamily \label{group__levels_gadb6c7a5b773c1d6bd2f23a36812eac87} 
+bool check\+\_\+medium (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the medium button is selected. 
+
+\begin{DoxyReturn}{Returns}
+Return true if the medium button is selected, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__levels_gac47f2fd2fe3da54acf16194c52f3f75b}\index{levels@{levels}!end\_levels@{end\_levels}}
+\index{end\_levels@{end\_levels}!levels@{levels}}
+\doxysubsubsection{\texorpdfstring{end\_levels()}{end\_levels()}}
+{\footnotesize\ttfamily \label{group__levels_gac47f2fd2fe3da54acf16194c52f3f75b} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} end\+\_\+levels (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ends the levels. 
+
+Destroys the buttons (easy, medium and hard) and the cursor. \Hypertarget{group__levels_gab74c6d19d713ea1b4ebb7cb6b0341872}\index{levels@{levels}!keyboard\_levels\_handler@{keyboard\_levels\_handler}}
+\index{keyboard\_levels\_handler@{keyboard\_levels\_handler}!levels@{levels}}
+\doxysubsubsection{\texorpdfstring{keyboard\_levels\_handler()}{keyboard\_levels\_handler()}}
+{\footnotesize\ttfamily \label{group__levels_gab74c6d19d713ea1b4ebb7cb6b0341872} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} keyboard\+\_\+levels\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles an interrupt from the keyboard when in the levels state. 
+
+Selects/\+Unselects the buttons \Hypertarget{group__levels_gad61df0eb5337b0c685d47297b606a688}\index{levels@{levels}!mouse\_levels\_handler@{mouse\_levels\_handler}}
+\index{mouse\_levels\_handler@{mouse\_levels\_handler}!levels@{levels}}
+\doxysubsubsection{\texorpdfstring{mouse\_levels\_handler()}{mouse\_levels\_handler()}}
+{\footnotesize\ttfamily \label{group__levels_gad61df0eb5337b0c685d47297b606a688} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} mouse\+\_\+levels\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles an interrupt from the mouse when in the levels state. 
+
+Moves the cursor and selects/unselects the buttons \Hypertarget{group__levels_gae00eca1f6cb677fde14a0daf395d2b69}\index{levels@{levels}!start\_levels@{start\_levels}}
+\index{start\_levels@{start\_levels}!levels@{levels}}
+\doxysubsubsection{\texorpdfstring{start\_levels()}{start\_levels()}}
+{\footnotesize\ttfamily \label{group__levels_gae00eca1f6cb677fde14a0daf395d2b69} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} start\+\_\+levels (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x\+Resolution}{, }\item[{uint16\+\_\+t}]{y\+Resolution}{}\end{DoxyParamCaption})}
+
+
+
+Starts the levels. 
+
+Constructs the buttons (easy, medium and hard) and the cursor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Resolution} & horizontal resolution of the screen in pixels \\
+\hline
+{\em y\+Resolution} & vertical resolution of the screen in pixels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}

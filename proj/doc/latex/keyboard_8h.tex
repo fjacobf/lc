@@ -1,0 +1,25 @@
+\doxysection{src/controller/keyboard.h File Reference}
+\hypertarget{keyboard_8h}{}\label{keyboard_8h}\index{src/controller/keyboard.h@{src/controller/keyboard.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}kbc.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structscancode}{scancode}}
+\begin{DoxyCompactList}\small\item\em Struct for scancodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_ga8eee4d0a15beada731a514481b5ad4bf}{keyboard\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables keyboard interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_gac95aea27a5e91b363b876fed881f368f}{keyboard\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} (keyboard\+\_\+read\+\_\+scancode\+\_\+byte())
+\begin{DoxyCompactList}\small\item\em Reads the scancode byte from the output buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__keyboard_gab9e6ed7960d60aa4834f2038247d4536}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__keyboard_ga67de9d1e2429d220c07608449d54ebe0}{keyboard\+\_\+restore}} ()
+\begin{DoxyCompactList}\small\item\em Restores keyboard (resets scancode) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_ga1944fd3a1e8c15001ab35dc85ea5c745}{keyboard\+\_\+enable\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Enables keyboard interrupts, by writing an appropriate KBC command byte. \end{DoxyCompactList}\end{DoxyCompactItemize}

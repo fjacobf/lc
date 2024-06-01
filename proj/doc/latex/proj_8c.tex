@@ -1,0 +1,153 @@
+\doxysection{src/proj.c File Reference}
+\hypertarget{proj_8c}{}\label{proj_8c}\index{src/proj.c@{src/proj.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}model/model.\+h"{}}\newline
+{\ttfamily \#include "{}view/view.\+h"{}}\newline
+{\ttfamily \#include "{}controller/keyboard.\+h"{}}\newline
+{\ttfamily \#include "{}controller/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}controller/video.\+h"{}}\newline
+{\ttfamily \#include $<$lcom/timer.\+h$>$}\newline
+{\ttfamily \#include "{}controller/rtc.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{proj_8c_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}}~60
+\item 
+\#define \mbox{\hyperlink{proj_8c_ab8c52c1b4c021ed3e6b6b677bd2ac019}{MODE}}~0x115
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{proj_8c_ac92d3b835636641550b12b0f93daf21d}{start}} ()
+\begin{DoxyCompactList}\small\item\em Configures the devices as needed and starts the project. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{proj_8c_afe461d27b9c48d5921c00d521181f12f}{loop}} ()
+\begin{DoxyCompactList}\small\item\em Receives and handles the subscribed interrupts, while in the game state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{proj_8c_a882067407682fbb5472b9ebaed581708}{end}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes interrupts from all devices and ends the project. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{proj_8c_a7a72220d8366dd84709e79ce415862e5}{proj\+\_\+main\+\_\+loop}} (\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em LCOM Project main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{proj_8c_a876b486d3a5241a126bd5751c5f70f79}{state}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{proj_8c_a8fce0127540dcd90938d433c87cb72ba}{timer\+\_\+irq\+\_\+set}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{proj_8c_adad2abf628eaef92e087d0ab6bbf802d}{keyboard\+\_\+irq\+\_\+set}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{proj_8c_ac85e6f303e55f1e7b8a2330be6cd8753}{mouse\+\_\+irq\+\_\+set}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{proj_8c_a39922d740a9cb1af5169e051b9ce2d28}{rtc\+\_\+irq\+\_\+set}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{proj_8c_ac92ca5ab87034a348decad7ee8d4bd1b}\index{proj.c@{proj.c}!FPS@{FPS}}
+\index{FPS@{FPS}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily \label{proj_8c_ac92ca5ab87034a348decad7ee8d4bd1b} 
+\#define FPS~60}
+
+\Hypertarget{proj_8c_ab8c52c1b4c021ed3e6b6b677bd2ac019}\index{proj.c@{proj.c}!MODE@{MODE}}
+\index{MODE@{MODE}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{MODE}{MODE}}
+{\footnotesize\ttfamily \label{proj_8c_ab8c52c1b4c021ed3e6b6b677bd2ac019} 
+\#define MODE~0x115}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{proj_8c_a882067407682fbb5472b9ebaed581708}\index{proj.c@{proj.c}!end@{end}}
+\index{end@{end}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily \label{proj_8c_a882067407682fbb5472b9ebaed581708} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} end (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes interrupts from all devices and ends the project. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{proj_8c_afe461d27b9c48d5921c00d521181f12f}\index{proj.c@{proj.c}!loop@{loop}}
+\index{loop@{loop}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{proj_8c_afe461d27b9c48d5921c00d521181f12f} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Receives and handles the subscribed interrupts, while in the game state. 
+
+\Hypertarget{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}\index{proj.c@{proj.c}!main@{main}}
+\index{main@{main}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{proj_8c_a0ddf1224851353fc92bfbff6f499fa97} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+\Hypertarget{proj_8c_a7a72220d8366dd84709e79ce415862e5}\index{proj.c@{proj.c}!proj\_main\_loop@{proj\_main\_loop}}
+\index{proj\_main\_loop@{proj\_main\_loop}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{proj\_main\_loop()}{proj\_main\_loop()}}
+{\footnotesize\ttfamily \label{proj_8c_a7a72220d8366dd84709e79ce415862e5} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} proj\+\_\+main\+\_\+loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}}}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+LCOM Project main loop. 
+
+Runs the project.
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{proj_8c_ac92d3b835636641550b12b0f93daf21d}\index{proj.c@{proj.c}!start@{start}}
+\index{start@{start}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{proj_8c_ac92d3b835636641550b12b0f93daf21d} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Configures the devices as needed and starts the project. 
+
+Sets timer frequency, subscribes interrupts from all devices and changes video graphics mode to the desired one. Starts PONG and draws the first frame.
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{proj_8c_adad2abf628eaef92e087d0ab6bbf802d}\index{proj.c@{proj.c}!keyboard\_irq\_set@{keyboard\_irq\_set}}
+\index{keyboard\_irq\_set@{keyboard\_irq\_set}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{keyboard\_irq\_set}{keyboard\_irq\_set}}
+{\footnotesize\ttfamily \label{proj_8c_adad2abf628eaef92e087d0ab6bbf802d} 
+uint8\+\_\+t keyboard\+\_\+irq\+\_\+set}
+
+\Hypertarget{proj_8c_ac85e6f303e55f1e7b8a2330be6cd8753}\index{proj.c@{proj.c}!mouse\_irq\_set@{mouse\_irq\_set}}
+\index{mouse\_irq\_set@{mouse\_irq\_set}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_irq\_set}{mouse\_irq\_set}}
+{\footnotesize\ttfamily \label{proj_8c_ac85e6f303e55f1e7b8a2330be6cd8753} 
+uint8\+\_\+t mouse\+\_\+irq\+\_\+set}
+
+\Hypertarget{proj_8c_a39922d740a9cb1af5169e051b9ce2d28}\index{proj.c@{proj.c}!rtc\_irq\_set@{rtc\_irq\_set}}
+\index{rtc\_irq\_set@{rtc\_irq\_set}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{rtc\_irq\_set}{rtc\_irq\_set}}
+{\footnotesize\ttfamily \label{proj_8c_a39922d740a9cb1af5169e051b9ce2d28} 
+uint8\+\_\+t rtc\+\_\+irq\+\_\+set}
+
+\Hypertarget{proj_8c_a876b486d3a5241a126bd5751c5f70f79}\index{proj.c@{proj.c}!state@{state}}
+\index{state@{state}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{proj_8c_a876b486d3a5241a126bd5751c5f70f79} 
+\mbox{\hyperlink{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}} state\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{proj_8c_a8fce0127540dcd90938d433c87cb72ba}\index{proj.c@{proj.c}!timer\_irq\_set@{timer\_irq\_set}}
+\index{timer\_irq\_set@{timer\_irq\_set}!proj.c@{proj.c}}
+\doxysubsubsection{\texorpdfstring{timer\_irq\_set}{timer\_irq\_set}}
+{\footnotesize\ttfamily \label{proj_8c_a8fce0127540dcd90938d433c87cb72ba} 
+uint8\+\_\+t timer\+\_\+irq\+\_\+set}
+

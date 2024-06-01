@@ -1,0 +1,19 @@
+\doxysection{src/model/game.h File Reference}
+\hypertarget{game_8h}{}\label{game_8h}\index{src/model/game.h@{src/model/game.h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__game_gafb5ec20a73ee79726b0c2d838eadfad3}{start\+\_\+game}} (uint16\+\_\+t x\+Resolution, uint16\+\_\+t y\+Resolution, uint8\+\_\+t difficulty)
+\begin{DoxyCompactList}\small\item\em Starts the game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__game_ga48c243ef9f97bd6e54d0a99ba25b3266}{timer\+\_\+game\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the timer when in the game state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__game_gafc3d42b5d714a18d73d25f22af59f768}{keyboard\+\_\+game\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the keyboard when in the game state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__game_gabd6510909f5fa762c76b4d2f66ed6611}{mouse\+\_\+game\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the mouse when in the game state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__game_ga5e3dbbd53b71c7e9756de519d268da5e}{check\+\_\+game\+\_\+over}} ()
+\begin{DoxyCompactList}\small\item\em Checks for game over (the ball is out of the screen limits/bounds) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__game_ga4202fa5c5191c7e387d7570da6c8cd8c}{end\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Ends the game. \end{DoxyCompactList}\end{DoxyCompactItemize}

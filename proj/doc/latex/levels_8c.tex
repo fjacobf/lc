@@ -1,0 +1,85 @@
+\doxysection{src/model/levels.c File Reference}
+\hypertarget{levels_8c}{}\label{levels_8c}\index{src/model/levels.c@{src/model/levels.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}levels.\+h"{}}\newline
+{\ttfamily \#include "{}button.\+h"{}}\newline
+{\ttfamily \#include "{}cursor.\+h"{}}\newline
+{\ttfamily \#include "{}../controller/keyboard.\+h"{}}\newline
+{\ttfamily \#include "{}../controller/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}../xpm/button\+\_\+easy.\+xpm"{}}\newline
+{\ttfamily \#include "{}../xpm/button\+\_\+easy\+\_\+selected.\+xpm"{}}\newline
+{\ttfamily \#include "{}../xpm/button\+\_\+hard.\+xpm"{}}\newline
+{\ttfamily \#include "{}../xpm/button\+\_\+hard\+\_\+selected.\+xpm"{}}\newline
+{\ttfamily \#include "{}../xpm/button\+\_\+medium.\+xpm"{}}\newline
+{\ttfamily \#include "{}../xpm/button\+\_\+medium\+\_\+selected.\+xpm"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__levels_gae00eca1f6cb677fde14a0daf395d2b69}{start\+\_\+levels}} (uint16\+\_\+t x\+Resolution, uint16\+\_\+t y\+Resolution)
+\begin{DoxyCompactList}\small\item\em Starts the levels. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__levels_gab74c6d19d713ea1b4ebb7cb6b0341872}{keyboard\+\_\+levels\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the keyboard when in the levels state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__levels_gad61df0eb5337b0c685d47297b606a688}{mouse\+\_\+levels\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the mouse when in the levels state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__levels_ga1f470ca50eab9548d5bc64810c9197f1}{check\+\_\+easy}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the easy button is selected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__levels_gadb6c7a5b773c1d6bd2f23a36812eac87}{check\+\_\+medium}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the medium button is selected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__levels_ga5630c6c6a7517ddccbd9d438b56786bd}{check\+\_\+hard}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the hard button is selected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__levels_gac47f2fd2fe3da54acf16194c52f3f75b}{end\+\_\+levels}} ()
+\begin{DoxyCompactList}\small\item\em Ends the levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structscancode}{scancode}} \mbox{\hyperlink{levels_8c_a0076527ee56df980d736e3ef2e762c6b}{code}}
+\item 
+struct packet \mbox{\hyperlink{levels_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\+\_\+packet}}
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{levels_8c_ac37eaabdf45c738708de3e8bce9fd63f}{easy}} = NULL
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{levels_8c_ae0b3b8a9b8b2d9f1a2b16c1af23b26f1}{medium}} = NULL
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{levels_8c_a19ddc604128343ee21a8cabcefac8ac0}{hard}} = NULL
+\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{levels_8c_ada2fcd40ba53bba2bef41d4c78accef8}{cursor\+\_\+levels}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{levels_8c_a0076527ee56df980d736e3ef2e762c6b}\index{levels.c@{levels.c}!code@{code}}
+\index{code@{code}!levels.c@{levels.c}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily \label{levels_8c_a0076527ee56df980d736e3ef2e762c6b} 
+\mbox{\hyperlink{structscancode}{scancode}} code\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{levels_8c_ada2fcd40ba53bba2bef41d4c78accef8}\index{levels.c@{levels.c}!cursor\_levels@{cursor\_levels}}
+\index{cursor\_levels@{cursor\_levels}!levels.c@{levels.c}}
+\doxysubsubsection{\texorpdfstring{cursor\_levels}{cursor\_levels}}
+{\footnotesize\ttfamily \label{levels_8c_ada2fcd40ba53bba2bef41d4c78accef8} 
+\mbox{\hyperlink{struct_cursor}{Cursor}}\texorpdfstring{$\ast$}{*} cursor\+\_\+levels = NULL}
+
+\Hypertarget{levels_8c_ac37eaabdf45c738708de3e8bce9fd63f}\index{levels.c@{levels.c}!easy@{easy}}
+\index{easy@{easy}!levels.c@{levels.c}}
+\doxysubsubsection{\texorpdfstring{easy}{easy}}
+{\footnotesize\ttfamily \label{levels_8c_ac37eaabdf45c738708de3e8bce9fd63f} 
+\mbox{\hyperlink{struct_button}{Button}}\texorpdfstring{$\ast$}{*} easy = NULL}
+
+\Hypertarget{levels_8c_a19ddc604128343ee21a8cabcefac8ac0}\index{levels.c@{levels.c}!hard@{hard}}
+\index{hard@{hard}!levels.c@{levels.c}}
+\doxysubsubsection{\texorpdfstring{hard}{hard}}
+{\footnotesize\ttfamily \label{levels_8c_a19ddc604128343ee21a8cabcefac8ac0} 
+\mbox{\hyperlink{struct_button}{Button}}\texorpdfstring{$\ast$}{*} hard = NULL}
+
+\Hypertarget{levels_8c_ae0b3b8a9b8b2d9f1a2b16c1af23b26f1}\index{levels.c@{levels.c}!medium@{medium}}
+\index{medium@{medium}!levels.c@{levels.c}}
+\doxysubsubsection{\texorpdfstring{medium}{medium}}
+{\footnotesize\ttfamily \label{levels_8c_ae0b3b8a9b8b2d9f1a2b16c1af23b26f1} 
+\mbox{\hyperlink{struct_button}{Button}}\texorpdfstring{$\ast$}{*} medium = NULL}
+
+\Hypertarget{levels_8c_a3b2e64ffb96c650d6525c99be01c7331}\index{levels.c@{levels.c}!mouse\_packet@{mouse\_packet}}
+\index{mouse\_packet@{mouse\_packet}!levels.c@{levels.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_packet}{mouse\_packet}}
+{\footnotesize\ttfamily \label{levels_8c_a3b2e64ffb96c650d6525c99be01c7331} 
+struct packet mouse\+\_\+packet\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,123 @@
+\doxysection{wall}
+\hypertarget{group__wall}{}\label{group__wall}\index{wall@{wall}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_wall}{Wall}}
+\begin{DoxyCompactList}\small\item\em Struct for the wall. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__wall_ga474f6eddb247ac0f0002f9adba1bdcb5}{construct\+\_\+wall}} (int16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, int16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}}, uint8\+\_\+t w, uint8\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_wall}{Wall} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__wall_gae2f8c11162ff392a7806b47040861360}{move\+\_\+wall\+\_\+up}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall)
+\begin{DoxyCompactList}\small\item\em Moves wall up. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__wall_ga156dc0bbb050cfb0189bd1401d11a442}{move\+\_\+wall\+\_\+down}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall, uint16\+\_\+t \mbox{\hyperlink{game_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}{y\+\_\+max}})
+\begin{DoxyCompactList}\small\item\em Moves wall down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__wall_gaf24f28ccda8131ff2e0aaf782319865d}{move\+\_\+wall\+\_\+y}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Moves wall according to y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__wall_ga524595dbe261c7e436c17dd50a2e58f7}{destroy\+\_\+wall}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_wall}{Wall} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to the wall 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__wall_ga474f6eddb247ac0f0002f9adba1bdcb5}\index{wall@{wall}!construct\_wall@{construct\_wall}}
+\index{construct\_wall@{construct\_wall}!wall@{wall}}
+\doxysubsubsection{\texorpdfstring{construct\_wall()}{construct\_wall()}}
+{\footnotesize\ttfamily \label{group__wall_ga474f6eddb247ac0f0002f9adba1bdcb5} 
+\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*} construct\+\_\+wall (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x}{, }\item[{int16\+\_\+t}]{y}{, }\item[{uint8\+\_\+t}]{w}{, }\item[{uint8\+\_\+t}]{h}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_wall}{Wall} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of the wall (top-\/left corner) \\
+\hline
+{\em y} & vertical coordinate of the wall (top-\/left corner) \\
+\hline
+{\em w} & width of the wall \\
+\hline
+{\em h} & height of the wall \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constructed wall on success, NULL otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__wall_ga524595dbe261c7e436c17dd50a2e58f7}\index{wall@{wall}!destroy\_wall@{destroy\_wall}}
+\index{destroy\_wall@{destroy\_wall}!wall@{wall}}
+\doxysubsubsection{\texorpdfstring{destroy\_wall()}{destroy\_wall()}}
+{\footnotesize\ttfamily \label{group__wall_ga524595dbe261c7e436c17dd50a2e58f7} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} destroy\+\_\+wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}}]{wall}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_wall}{Wall} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & pointer to the wall to be destroyed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__wall_ga156dc0bbb050cfb0189bd1401d11a442}\index{wall@{wall}!move\_wall\_down@{move\_wall\_down}}
+\index{move\_wall\_down@{move\_wall\_down}!wall@{wall}}
+\doxysubsubsection{\texorpdfstring{move\_wall\_down()}{move\_wall\_down()}}
+{\footnotesize\ttfamily \label{group__wall_ga156dc0bbb050cfb0189bd1401d11a442} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} move\+\_\+wall\+\_\+down (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}}]{wall}{, }\item[{uint16\+\_\+t}]{y\+\_\+max}{}\end{DoxyParamCaption})}
+
+
+
+Moves wall down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & pointer to the wall to be moved \\
+\hline
+{\em y\+\_\+max} & maximum vertical coordinate of the wall (screen limit/boundary) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__wall_gae2f8c11162ff392a7806b47040861360}\index{wall@{wall}!move\_wall\_up@{move\_wall\_up}}
+\index{move\_wall\_up@{move\_wall\_up}!wall@{wall}}
+\doxysubsubsection{\texorpdfstring{move\_wall\_up()}{move\_wall\_up()}}
+{\footnotesize\ttfamily \label{group__wall_gae2f8c11162ff392a7806b47040861360} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} move\+\_\+wall\+\_\+up (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}}]{wall}{}\end{DoxyParamCaption})}
+
+
+
+Moves wall up. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & pointer to the wall to be moved \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__wall_gaf24f28ccda8131ff2e0aaf782319865d}\index{wall@{wall}!move\_wall\_y@{move\_wall\_y}}
+\index{move\_wall\_y@{move\_wall\_y}!wall@{wall}}
+\doxysubsubsection{\texorpdfstring{move\_wall\_y()}{move\_wall\_y()}}
+{\footnotesize\ttfamily \label{group__wall_gaf24f28ccda8131ff2e0aaf782319865d} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} move\+\_\+wall\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}}]{wall}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Moves wall according to y. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em wall} & pointer to the wall to be moved \\
+\hline
+{\em y\+\_\+max} & y coordinate of the mouse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}

@@ -1,0 +1,26 @@
+\doxysection{cursor.\+h}
+\hypertarget{cursor_8h_source}{}\label{cursor_8h_source}\index{src/model/cursor.h@{src/model/cursor.h}}
+\mbox{\hyperlink{cursor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_CURSOR\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_CURSOR\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{sprite_8h}{sprite.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00018\ \ \ int16\_t\ \mbox{\hyperlink{struct_cursor_ae1c2d516777e6b42af0d281c9ecc7375}{x}};\ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ int16\_t\ \mbox{\hyperlink{struct_cursor_af77b1a54442f2443cf64a4766f916bcd}{y}};\ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{struct_cursor_a7c54302f990f134ca6e37a2e9ef9999d}{sprite}};\ }
+\DoxyCodeLine{00021\ \}\ \mbox{\hyperlink{struct_cursor}{Cursor}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00030\ \mbox{\hyperlink{struct_cursor}{Cursor}}\ *\mbox{\hyperlink{group__cursor_gaae4b28d6d129f34632e65b7cdd6c6bdd}{construct\_cursor}}(int16\_t\ \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}},\ int16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__cursor_gaa72cc96c6d56c18ed4dd494e5538673c}{move\_cursor}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor,\ int16\_t\ \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}},\ int16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__cursor_ga703c262b2001b4ee8aadfadd87baae71}{destroy\_cursor}}(\mbox{\hyperlink{struct_cursor}{Cursor}}\ *cursor);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_Cursor\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

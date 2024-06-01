@@ -1,0 +1,21 @@
+\doxysection{src/model/wall.h File Reference}
+\hypertarget{wall_8h}{}\label{wall_8h}\index{src/model/wall.h@{src/model/wall.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_wall}{Wall}}
+\begin{DoxyCompactList}\small\item\em Struct for the wall. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__wall_ga474f6eddb247ac0f0002f9adba1bdcb5}{construct\+\_\+wall}} (int16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, int16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}}, uint8\+\_\+t w, uint8\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_wall}{Wall} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__wall_gae2f8c11162ff392a7806b47040861360}{move\+\_\+wall\+\_\+up}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall)
+\begin{DoxyCompactList}\small\item\em Moves wall up. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__wall_ga156dc0bbb050cfb0189bd1401d11a442}{move\+\_\+wall\+\_\+down}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall, uint16\+\_\+t \mbox{\hyperlink{game_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}{y\+\_\+max}})
+\begin{DoxyCompactList}\small\item\em Moves wall down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__wall_gaf24f28ccda8131ff2e0aaf782319865d}{move\+\_\+wall\+\_\+y}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Moves wall according to y. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__wall_ga524595dbe261c7e436c17dd50a2e58f7}{destroy\+\_\+wall}} (\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_wall}{Wall} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}

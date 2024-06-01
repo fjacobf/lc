@@ -1,0 +1,129 @@
+\doxysection{model}
+\hypertarget{group__model}{}\label{group__model}\index{model@{model}}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}} \{ \mbox{\hyperlink{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}
+, \mbox{\hyperlink{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8a2d31bf71d068ed802a18e984232998df}{LEVELS}}
+, \mbox{\hyperlink{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8ad50cf309d7568040619ed26ee6835a84}{GAME}}
+, \mbox{\hyperlink{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8adc6f24fd6915a3f2786a1b7045406924}{END}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enum for the states. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__model_ga7eaccedbdd108ffb00a7b00eeb3132b8}{start\+\_\+pong}} ()
+\begin{DoxyCompactList}\small\item\em Starts pong. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_gac7c3715c83c45c6411f9f3f9f6cf8c7f}{timer\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the timer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_gad383895f42571ff2bb4d226c5f4fb83e}{keyboard\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the keyboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_ga1ba8ccf32722915b37e49d01e9f9b6d6}{mouse\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the mouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_ga17374e428acd4fc86f2b8a8ede54deca}{rtc\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the rtc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_gaffc0809ee5c211012ece651ac1f83633}{end\+\_\+pong}} ()
+\begin{DoxyCompactList}\small\item\em Ends pong. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to the model 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8}\index{model@{model}!State@{State}}
+\index{State@{State}!model@{model}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8} 
+enum \mbox{\hyperlink{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+
+
+Enum for the states. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU@{MENU}!model@{model}}\index{model@{model}!MENU@{MENU}}}\Hypertarget{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8a4c40e60bc71a32b924ce1f08d57f9721}\label{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8} 
+MENU&menu state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEVELS@{LEVELS}!model@{model}}\index{model@{model}!LEVELS@{LEVELS}}}\Hypertarget{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8a2d31bf71d068ed802a18e984232998df}\label{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8} 
+LEVELS&levels state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME@{GAME}!model@{model}}\index{model@{model}!GAME@{GAME}}}\Hypertarget{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8ad50cf309d7568040619ed26ee6835a84}\label{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8} 
+GAME&game state \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{END@{END}!model@{model}}\index{model@{model}!END@{END}}}\Hypertarget{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8adc6f24fd6915a3f2786a1b7045406924}\label{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8} 
+END&end state \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__model_gaffc0809ee5c211012ece651ac1f83633}\index{model@{model}!end\_pong@{end\_pong}}
+\index{end\_pong@{end\_pong}!model@{model}}
+\doxysubsubsection{\texorpdfstring{end\_pong()}{end\_pong()}}
+{\footnotesize\ttfamily \label{group__model_gaffc0809ee5c211012ece651ac1f83633} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} end\+\_\+pong (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Ends pong. 
+
+Ends the game, the levels and the menu. \Hypertarget{group__model_gad383895f42571ff2bb4d226c5f4fb83e}\index{model@{model}!keyboard\_interrupt\_handler@{keyboard\_interrupt\_handler}}
+\index{keyboard\_interrupt\_handler@{keyboard\_interrupt\_handler}!model@{model}}
+\doxysubsubsection{\texorpdfstring{keyboard\_interrupt\_handler()}{keyboard\_interrupt\_handler()}}
+{\footnotesize\ttfamily \label{group__model_gad383895f42571ff2bb4d226c5f4fb83e} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} keyboard\+\_\+interrupt\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles an interrupt from the keyboard. 
+
+Handles the interrupt according to the current state, restores/resets the keyboard scancode and draws the new frame. \Hypertarget{group__model_ga1ba8ccf32722915b37e49d01e9f9b6d6}\index{model@{model}!mouse\_interrupt\_handler@{mouse\_interrupt\_handler}}
+\index{mouse\_interrupt\_handler@{mouse\_interrupt\_handler}!model@{model}}
+\doxysubsubsection{\texorpdfstring{mouse\_interrupt\_handler()}{mouse\_interrupt\_handler()}}
+{\footnotesize\ttfamily \label{group__model_ga1ba8ccf32722915b37e49d01e9f9b6d6} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} mouse\+\_\+interrupt\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles an interrupt from the mouse. 
+
+Handles the interrupt according to the current state, restores/resets the mouse packet and draws the new frame. \Hypertarget{group__model_ga17374e428acd4fc86f2b8a8ede54deca}\index{model@{model}!rtc\_interrupt\_handler@{rtc\_interrupt\_handler}}
+\index{rtc\_interrupt\_handler@{rtc\_interrupt\_handler}!model@{model}}
+\doxysubsubsection{\texorpdfstring{rtc\_interrupt\_handler()}{rtc\_interrupt\_handler()}}
+{\footnotesize\ttfamily \label{group__model_ga17374e428acd4fc86f2b8a8ede54deca} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} rtc\+\_\+interrupt\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles an interrupt from the rtc. 
+
+Handles the interrupt according to the current state, restores/resets the mouse packet and draws the new frame. \Hypertarget{group__model_ga7eaccedbdd108ffb00a7b00eeb3132b8}\index{model@{model}!start\_pong@{start\_pong}}
+\index{start\_pong@{start\_pong}!model@{model}}
+\doxysubsubsection{\texorpdfstring{start\_pong()}{start\_pong()}}
+{\footnotesize\ttfamily \label{group__model_ga7eaccedbdd108ffb00a7b00eeb3132b8} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} start\+\_\+pong (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts pong. 
+
+Starts the menu.
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__model_gac7c3715c83c45c6411f9f3f9f6cf8c7f}\index{model@{model}!timer\_interrupt\_handler@{timer\_interrupt\_handler}}
+\index{timer\_interrupt\_handler@{timer\_interrupt\_handler}!model@{model}}
+\doxysubsubsection{\texorpdfstring{timer\_interrupt\_handler()}{timer\_interrupt\_handler()}}
+{\footnotesize\ttfamily \label{group__model_gac7c3715c83c45c6411f9f3f9f6cf8c7f} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} timer\+\_\+interrupt\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Handles an interrupt from the timer. 
+
+Swaps the buffers, handles the interrupt according to the current state and draws the new frame. 

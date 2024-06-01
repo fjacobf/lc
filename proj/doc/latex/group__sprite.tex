@@ -1,0 +1,113 @@
+\doxysection{sprite}
+\hypertarget{group__sprite}{}\label{group__sprite}\index{sprite@{sprite}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_sprite}{Sprite}}
+\begin{DoxyCompactList}\small\item\em Struct for the sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__sprite_ga07809139be0eece64c9b839b18d61d61}{construct\+\_\+sprite}} (xpm\+\_\+map\+\_\+t xpm, uint32\+\_\+t background)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_sprite}{Sprite} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__sprite_ga607cfeb4f019a84c346eb3bce9da0420}{destroy\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_sprite}{Sprite} destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite_gab32e013b98922f4ec574d9848a8452c2}{construct\+\_\+numbers}} ()
+\begin{DoxyCompactList}\small\item\em Numbers (and times symbol) constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__sprite_ga71ae7e6eb4898555616d90ae43cc1cc1}{destroy\+\_\+numbers}} ()
+\begin{DoxyCompactList}\small\item\em Numbers (and times symbol) destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite_ga0d9edd19a19629ec1b9c7224128cd6b5}{construct\+\_\+background}} ()
+\begin{DoxyCompactList}\small\item\em Background image constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__sprite_gae85f24174943234a086fedd93214d5a7}{destroy\+\_\+background}} ()
+\begin{DoxyCompactList}\small\item\em background destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to the sprites 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__sprite_ga0d9edd19a19629ec1b9c7224128cd6b5}\index{sprite@{sprite}!construct\_background@{construct\_background}}
+\index{construct\_background@{construct\_background}!sprite@{sprite}}
+\doxysubsubsection{\texorpdfstring{construct\_background()}{construct\_background()}}
+{\footnotesize\ttfamily \label{group__sprite_ga0d9edd19a19629ec1b9c7224128cd6b5} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} construct\+\_\+background (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Background image constructor. 
+
+Initializes variables with the sprites.
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite_gab32e013b98922f4ec574d9848a8452c2}\index{sprite@{sprite}!construct\_numbers@{construct\_numbers}}
+\index{construct\_numbers@{construct\_numbers}!sprite@{sprite}}
+\doxysubsubsection{\texorpdfstring{construct\_numbers()}{construct\_numbers()}}
+{\footnotesize\ttfamily \label{group__sprite_gab32e013b98922f4ec574d9848a8452c2} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} construct\+\_\+numbers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Numbers (and times symbol) constructor. 
+
+Initializes variables with the sprites.
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite_ga07809139be0eece64c9b839b18d61d61}\index{sprite@{sprite}!construct\_sprite@{construct\_sprite}}
+\index{construct\_sprite@{construct\_sprite}!sprite@{sprite}}
+\doxysubsubsection{\texorpdfstring{construct\_sprite()}{construct\_sprite()}}
+{\footnotesize\ttfamily \label{group__sprite_ga07809139be0eece64c9b839b18d61d61} 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} construct\+\_\+sprite (\begin{DoxyParamCaption}\item[{xpm\+\_\+map\+\_\+t}]{xpm}{, }\item[{uint32\+\_\+t}]{background}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_sprite}{Sprite} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpm} & XPM from where the sprite should be constructed \\
+\hline
+{\em background} & background color of the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constructed sprite on success, NULL otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite_gae85f24174943234a086fedd93214d5a7}\index{sprite@{sprite}!destroy\_background@{destroy\_background}}
+\index{destroy\_background@{destroy\_background}!sprite@{sprite}}
+\doxysubsubsection{\texorpdfstring{destroy\_background()}{destroy\_background()}}
+{\footnotesize\ttfamily \label{group__sprite_gae85f24174943234a086fedd93214d5a7} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} destroy\+\_\+background (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+background destructor 
+
+Destroys the sprites. \Hypertarget{group__sprite_ga71ae7e6eb4898555616d90ae43cc1cc1}\index{sprite@{sprite}!destroy\_numbers@{destroy\_numbers}}
+\index{destroy\_numbers@{destroy\_numbers}!sprite@{sprite}}
+\doxysubsubsection{\texorpdfstring{destroy\_numbers()}{destroy\_numbers()}}
+{\footnotesize\ttfamily \label{group__sprite_ga71ae7e6eb4898555616d90ae43cc1cc1} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} destroy\+\_\+numbers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Numbers (and times symbol) destructor. 
+
+Destroys the sprites. \Hypertarget{group__sprite_ga607cfeb4f019a84c346eb3bce9da0420}\index{sprite@{sprite}!destroy\_sprite@{destroy\_sprite}}
+\index{destroy\_sprite@{destroy\_sprite}!sprite@{sprite}}
+\doxysubsubsection{\texorpdfstring{destroy\_sprite()}{destroy\_sprite()}}
+{\footnotesize\ttfamily \label{group__sprite_ga607cfeb4f019a84c346eb3bce9da0420} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} destroy\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_sprite}{Sprite} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & pointer to the sprite to be destroyed \\
+\hline
+\end{DoxyParams}

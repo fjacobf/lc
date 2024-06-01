@@ -1,0 +1,146 @@
+\doxysection{src/view/sprite\+\_\+view.c File Reference}
+\hypertarget{sprite__view_8c}{}\label{sprite__view_8c}\index{src/view/sprite\_view.c@{src/view/sprite\_view.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}sprite\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}../controller/video.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sprite__view_8c_a99d62cca2084c030133c3bdb019ec2cb}{NUMBER\+\_\+\+WIDTH}}~17
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gace221668fa3cbf0dda0546324d75beae}{draw\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_sprite}{Sprite} drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gaeecb54ece606d3cfbcde3bdac5adc480}{draw\+\_\+times}} (uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Times symbol (cross -\/ x) drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gacaaa925730376722f900e05b8ab4ecf8}{draw\+\_\+colon}} (uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Colon symbol (cross -\/ \+:) drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_ga09ebdae696e727aa1eedc2212db0181e}{draw\+\_\+sunny\+\_\+background}} ()
+\begin{DoxyCompactList}\small\item\em draws the background \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_ga4d01b37496a4c1f3ebace73ea9071553}{draw\+\_\+digit}} (uint8\+\_\+t digit, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Digit \mbox{[}0-\/9\mbox{]} drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gad7f61052219664fd09baafa1683835d8}{draw\+\_\+number}} (uint32\+\_\+t number, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Number drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gabab126dd4f5bf5b0f35d57e86a3cb022}{draw\+\_\+time}} (uint32\+\_\+t number, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Time drawer -\/ draws with the extra zeros in the left. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_a473c944970b0d3c3947e8dde9bc6aa92}{times}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_a78d7f6815a15187ce2d390dacee4154a}{zero}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_a302b787e946942a52603b9e5b9b2a9e8}{one}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_ab543044e785d7751b401e0240013b1ea}{two}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_a728a3294a0610be17105edefb33834a5}{three}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_ab7846ca3ee9ac6ff0438ee13b3ae1426}{four}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_aa9aaa4689cf85bf8458afa0e0305aa67}{five}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_aa74eff33c431a01cf98e6d24a818fb01}{six}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_ac7316233d1d182644208b89a51d7a4b1}{seven}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_af1667ee92c30932269e42a128a988439}{eight}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_ad93cef8b36359d46bfbdb71b0e65444c}{nine}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_a61d0c7fc9d9720d2ceb8044442cc3806}{colon}}
+\item 
+\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{sprite__view_8c_a2267b1e1542c2a2f9a96ffdf3cbe5bfc}{sunny}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{sprite__view_8c_a99d62cca2084c030133c3bdb019ec2cb}\index{sprite\_view.c@{sprite\_view.c}!NUMBER\_WIDTH@{NUMBER\_WIDTH}}
+\index{NUMBER\_WIDTH@{NUMBER\_WIDTH}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_WIDTH}{NUMBER\_WIDTH}}
+{\footnotesize\ttfamily \label{sprite__view_8c_a99d62cca2084c030133c3bdb019ec2cb} 
+\#define NUMBER\+\_\+\+WIDTH~17}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{sprite__view_8c_a61d0c7fc9d9720d2ceb8044442cc3806}\index{sprite\_view.c@{sprite\_view.c}!colon@{colon}}
+\index{colon@{colon}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{colon}{colon}}
+{\footnotesize\ttfamily \label{sprite__view_8c_a61d0c7fc9d9720d2ceb8044442cc3806} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} colon\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_af1667ee92c30932269e42a128a988439}\index{sprite\_view.c@{sprite\_view.c}!eight@{eight}}
+\index{eight@{eight}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{eight}{eight}}
+{\footnotesize\ttfamily \label{sprite__view_8c_af1667ee92c30932269e42a128a988439} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} eight\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_aa9aaa4689cf85bf8458afa0e0305aa67}\index{sprite\_view.c@{sprite\_view.c}!five@{five}}
+\index{five@{five}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{five}{five}}
+{\footnotesize\ttfamily \label{sprite__view_8c_aa9aaa4689cf85bf8458afa0e0305aa67} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} five\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_ab7846ca3ee9ac6ff0438ee13b3ae1426}\index{sprite\_view.c@{sprite\_view.c}!four@{four}}
+\index{four@{four}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{four}{four}}
+{\footnotesize\ttfamily \label{sprite__view_8c_ab7846ca3ee9ac6ff0438ee13b3ae1426} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} four\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_ad93cef8b36359d46bfbdb71b0e65444c}\index{sprite\_view.c@{sprite\_view.c}!nine@{nine}}
+\index{nine@{nine}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{nine}{nine}}
+{\footnotesize\ttfamily \label{sprite__view_8c_ad93cef8b36359d46bfbdb71b0e65444c} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} nine\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_a302b787e946942a52603b9e5b9b2a9e8}\index{sprite\_view.c@{sprite\_view.c}!one@{one}}
+\index{one@{one}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{one}{one}}
+{\footnotesize\ttfamily \label{sprite__view_8c_a302b787e946942a52603b9e5b9b2a9e8} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} one\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_ac7316233d1d182644208b89a51d7a4b1}\index{sprite\_view.c@{sprite\_view.c}!seven@{seven}}
+\index{seven@{seven}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{seven}{seven}}
+{\footnotesize\ttfamily \label{sprite__view_8c_ac7316233d1d182644208b89a51d7a4b1} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} seven\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_aa74eff33c431a01cf98e6d24a818fb01}\index{sprite\_view.c@{sprite\_view.c}!six@{six}}
+\index{six@{six}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{six}{six}}
+{\footnotesize\ttfamily \label{sprite__view_8c_aa74eff33c431a01cf98e6d24a818fb01} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} six\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_a2267b1e1542c2a2f9a96ffdf3cbe5bfc}\index{sprite\_view.c@{sprite\_view.c}!sunny@{sunny}}
+\index{sunny@{sunny}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{sunny}{sunny}}
+{\footnotesize\ttfamily \label{sprite__view_8c_a2267b1e1542c2a2f9a96ffdf3cbe5bfc} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} sunny\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_a728a3294a0610be17105edefb33834a5}\index{sprite\_view.c@{sprite\_view.c}!three@{three}}
+\index{three@{three}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{three}{three}}
+{\footnotesize\ttfamily \label{sprite__view_8c_a728a3294a0610be17105edefb33834a5} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} three\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_a473c944970b0d3c3947e8dde9bc6aa92}\index{sprite\_view.c@{sprite\_view.c}!times@{times}}
+\index{times@{times}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{times}{times}}
+{\footnotesize\ttfamily \label{sprite__view_8c_a473c944970b0d3c3947e8dde9bc6aa92} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} times\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_ab543044e785d7751b401e0240013b1ea}\index{sprite\_view.c@{sprite\_view.c}!two@{two}}
+\index{two@{two}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{two}{two}}
+{\footnotesize\ttfamily \label{sprite__view_8c_ab543044e785d7751b401e0240013b1ea} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} two\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{sprite__view_8c_a78d7f6815a15187ce2d390dacee4154a}\index{sprite\_view.c@{sprite\_view.c}!zero@{zero}}
+\index{zero@{zero}!sprite\_view.c@{sprite\_view.c}}
+\doxysubsubsection{\texorpdfstring{zero}{zero}}
+{\footnotesize\ttfamily \label{sprite__view_8c_a78d7f6815a15187ce2d390dacee4154a} 
+\mbox{\hyperlink{struct_sprite}{Sprite}}\texorpdfstring{$\ast$}{*} zero\hspace{0.3cm}{\ttfamily [extern]}}
+

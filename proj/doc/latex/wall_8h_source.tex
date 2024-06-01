@@ -1,0 +1,29 @@
+\doxysection{wall.\+h}
+\hypertarget{wall_8h_source}{}\label{wall_8h_source}\index{src/model/wall.h@{src/model/wall.h}}
+\mbox{\hyperlink{wall_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_WALL\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_WALL\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00016\ \ \ int16\_t\ \mbox{\hyperlink{struct_wall_ae1c2d516777e6b42af0d281c9ecc7375}{x}};\ }
+\DoxyCodeLine{00017\ \ \ int16\_t\ \mbox{\hyperlink{struct_wall_af77b1a54442f2443cf64a4766f916bcd}{y}};\ }
+\DoxyCodeLine{00018\ \ \ uint8\_t\ \mbox{\hyperlink{struct_wall_aba9ed0487b0aa23eba534648df8384c0}{w}};\ }
+\DoxyCodeLine{00019\ \ \ uint8\_t\ \mbox{\hyperlink{struct_wall_a1f1dfeb2f802fe99f37fe91867b84456}{h}};\ }
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{struct_wall}{Wall}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{struct_wall}{Wall}}\ *\mbox{\hyperlink{group__wall_ga474f6eddb247ac0f0002f9adba1bdcb5}{construct\_wall}}(int16\_t\ \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}},\ int16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}},\ uint8\_t\ w,\ uint8\_t\ h);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__wall_gae2f8c11162ff392a7806b47040861360}{move\_wall\_up}}(\mbox{\hyperlink{struct_wall}{Wall}}\ *wall);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__wall_ga156dc0bbb050cfb0189bd1401d11a442}{move\_wall\_down}}(\mbox{\hyperlink{struct_wall}{Wall}}\ *wall,\ uint16\_t\ \mbox{\hyperlink{game_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}{y\_max}});}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__wall_gaf24f28ccda8131ff2e0aaf782319865d}{move\_wall\_y}}(\mbox{\hyperlink{struct_wall}{Wall}}\ *wall,\ uint16\_t\ \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}});}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__wall_ga524595dbe261c7e436c17dd50a2e58f7}{destroy\_wall}}(\mbox{\hyperlink{struct_wall}{Wall}}\ *wall);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_WALL\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

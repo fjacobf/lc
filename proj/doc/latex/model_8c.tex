@@ -1,0 +1,66 @@
+\doxysection{src/model/model.c File Reference}
+\hypertarget{model_8c}{}\label{model_8c}\index{src/model/model.c@{src/model/model.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}model.\+h"{}}\newline
+{\ttfamily \#include "{}game.\+h"{}}\newline
+{\ttfamily \#include "{}levels.\+h"{}}\newline
+{\ttfamily \#include "{}menu.\+h"{}}\newline
+{\ttfamily \#include "{}../view/view.\+h"{}}\newline
+{\ttfamily \#include "{}../controller/keyboard.\+h"{}}\newline
+{\ttfamily \#include "{}../controller/mouse.\+h"{}}\newline
+{\ttfamily \#include "{}../controller/video.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__model_ga7eaccedbdd108ffb00a7b00eeb3132b8}{start\+\_\+pong}} ()
+\begin{DoxyCompactList}\small\item\em Starts pong. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_gac7c3715c83c45c6411f9f3f9f6cf8c7f}{timer\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the timer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_gad383895f42571ff2bb4d226c5f4fb83e}{keyboard\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the keyboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_ga1ba8ccf32722915b37e49d01e9f9b6d6}{mouse\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the mouse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_ga17374e428acd4fc86f2b8a8ede54deca}{rtc\+\_\+interrupt\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Handles an interrupt from the rtc. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__model_gaffc0809ee5c211012ece651ac1f83633}{end\+\_\+pong}} ()
+\begin{DoxyCompactList}\small\item\em Ends pong. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{model_8c_a876b486d3a5241a126bd5751c5f70f79}{state}} = \mbox{\hyperlink{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}
+\item 
+\mbox{\hyperlink{structscancode}{scancode}} \mbox{\hyperlink{model_8c_a0076527ee56df980d736e3ef2e762c6b}{code}}
+\item 
+struct packet \mbox{\hyperlink{model_8c_a3b2e64ffb96c650d6525c99be01c7331}{mouse\+\_\+packet}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{model_8c_a89d26f2c6bfb59d33cb465404db2cb48}{packet\+\_\+index}}
+\item 
+vbe\+\_\+mode\+\_\+info\+\_\+t \mbox{\hyperlink{group__video_ga26081be7a771e5c611b33f15caaf831e}{vmi\+\_\+p}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{model_8c_a0076527ee56df980d736e3ef2e762c6b}\index{model.c@{model.c}!code@{code}}
+\index{code@{code}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily \label{model_8c_a0076527ee56df980d736e3ef2e762c6b} 
+\mbox{\hyperlink{structscancode}{scancode}} code\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{model_8c_a3b2e64ffb96c650d6525c99be01c7331}\index{model.c@{model.c}!mouse\_packet@{mouse\_packet}}
+\index{mouse\_packet@{mouse\_packet}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_packet}{mouse\_packet}}
+{\footnotesize\ttfamily \label{model_8c_a3b2e64ffb96c650d6525c99be01c7331} 
+struct packet mouse\+\_\+packet\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{model_8c_a89d26f2c6bfb59d33cb465404db2cb48}\index{model.c@{model.c}!packet\_index@{packet\_index}}
+\index{packet\_index@{packet\_index}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{packet\_index}{packet\_index}}
+{\footnotesize\ttfamily \label{model_8c_a89d26f2c6bfb59d33cb465404db2cb48} 
+uint8\+\_\+t packet\+\_\+index\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{model_8c_a876b486d3a5241a126bd5751c5f70f79}\index{model.c@{model.c}!state@{state}}
+\index{state@{state}!model.c@{model.c}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \label{model_8c_a876b486d3a5241a126bd5751c5f70f79} 
+\mbox{\hyperlink{group__model_ga5d74787dedbc4e11c1ab15bf487e61f8}{State}} state = \mbox{\hyperlink{group__model_gga5d74787dedbc4e11c1ab15bf487e61f8a4c40e60bc71a32b924ce1f08d57f9721}{MENU}}}
+

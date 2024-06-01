@@ -1,0 +1,128 @@
+\doxysection{mouse}
+\hypertarget{group__mouse}{}\label{group__mouse}\index{mouse@{mouse}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__mouse_ga9da18257ff113b686bb826d154bfaa87}{mouse\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables mouse interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__mouse_ga685ad2706aca36d9869a30a19b9f446a}{mouse\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes mouse interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__mouse_ga6329eb796afb4a1aced4cf09896db595}{mouse\+\_\+read\+\_\+packet\+\_\+byte}} ()
+\begin{DoxyCompactList}\small\item\em Reads the packet byte from the output buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__mouse_ga834b6d7efe311484d6da234db333cb97}{mouse\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Mouse interrupt handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__mouse_ga1d84fb27af6bcd54b18fb57988f86e79}{mouse\+\_\+restore}} ()
+\begin{DoxyCompactList}\small\item\em Restores mouse (resets packet) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__mouse_gad35b135a465650bd58aef6ee248ca402}{mouse\+\_\+write\+\_\+command}} (uint8\+\_\+t command)
+\begin{DoxyCompactList}\small\item\em Writes mouse command. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__mouse_gaf07f0fbfa918e227e2f54d8d626dbc62}{mouse\+\_\+data\+\_\+reporting}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Enables or disables mouse data reporting. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for using the mouse 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__mouse_gaf07f0fbfa918e227e2f54d8d626dbc62}\index{mouse@{mouse}!mouse\_data\_reporting@{mouse\_data\_reporting}}
+\index{mouse\_data\_reporting@{mouse\_data\_reporting}!mouse@{mouse}}
+\doxysubsubsection{\texorpdfstring{mouse\_data\_reporting()}{mouse\_data\_reporting()}}
+{\footnotesize\ttfamily \label{group__mouse_gaf07f0fbfa918e227e2f54d8d626dbc62} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} mouse\+\_\+data\+\_\+reporting (\begin{DoxyParamCaption}\item[{bool}]{enable}{}\end{DoxyParamCaption})}
+
+
+
+Enables or disables mouse data reporting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enable} & true to enable mouse data reporting, false to disable mouse data reporting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__mouse_ga834b6d7efe311484d6da234db333cb97}\index{mouse@{mouse}!mouse\_ih@{mouse\_ih}}
+\index{mouse\_ih@{mouse\_ih}!mouse@{mouse}}
+\doxysubsubsection{\texorpdfstring{mouse\_ih()}{mouse\_ih()}}
+{\footnotesize\ttfamily \label{group__mouse_ga834b6d7efe311484d6da234db333cb97} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} mouse\+\_\+ih (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Mouse interrupt handler. 
+
+Calls \doxylink{group__mouse_ga6329eb796afb4a1aced4cf09896db595}{mouse\+\_\+read\+\_\+packet\+\_\+byte()}. \Hypertarget{group__mouse_ga6329eb796afb4a1aced4cf09896db595}\index{mouse@{mouse}!mouse\_read\_packet\_byte@{mouse\_read\_packet\_byte}}
+\index{mouse\_read\_packet\_byte@{mouse\_read\_packet\_byte}!mouse@{mouse}}
+\doxysubsubsection{\texorpdfstring{mouse\_read\_packet\_byte()}{mouse\_read\_packet\_byte()}}
+{\footnotesize\ttfamily \label{group__mouse_ga6329eb796afb4a1aced4cf09896db595} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} mouse\+\_\+read\+\_\+packet\+\_\+byte (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Reads the packet byte from the output buffer. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__mouse_ga1d84fb27af6bcd54b18fb57988f86e79}\index{mouse@{mouse}!mouse\_restore@{mouse\_restore}}
+\index{mouse\_restore@{mouse\_restore}!mouse@{mouse}}
+\doxysubsubsection{\texorpdfstring{mouse\_restore()}{mouse\_restore()}}
+{\footnotesize\ttfamily \label{group__mouse_ga1d84fb27af6bcd54b18fb57988f86e79} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} mouse\+\_\+restore (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Restores mouse (resets packet) 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__mouse_ga9da18257ff113b686bb826d154bfaa87}\index{mouse@{mouse}!mouse\_subscribe\_int@{mouse\_subscribe\_int}}
+\index{mouse\_subscribe\_int@{mouse\_subscribe\_int}!mouse@{mouse}}
+\doxysubsubsection{\texorpdfstring{mouse\_subscribe\_int()}{mouse\_subscribe\_int()}}
+{\footnotesize\ttfamily \label{group__mouse_ga9da18257ff113b686bb826d154bfaa87} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} mouse\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables mouse interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & address of memory to be initialized with the bit number to be set in the mask returned upon an interrupt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__mouse_ga685ad2706aca36d9869a30a19b9f446a}\index{mouse@{mouse}!mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}}
+\index{mouse\_unsubscribe\_int@{mouse\_unsubscribe\_int}!mouse@{mouse}}
+\doxysubsubsection{\texorpdfstring{mouse\_unsubscribe\_int()}{mouse\_unsubscribe\_int()}}
+{\footnotesize\ttfamily \label{group__mouse_ga685ad2706aca36d9869a30a19b9f446a} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} mouse\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__mouse_gad35b135a465650bd58aef6ee248ca402}\index{mouse@{mouse}!mouse\_write\_command@{mouse\_write\_command}}
+\index{mouse\_write\_command@{mouse\_write\_command}!mouse@{mouse}}
+\doxysubsubsection{\texorpdfstring{mouse\_write\_command()}{mouse\_write\_command()}}
+{\footnotesize\ttfamily \label{group__mouse_gad35b135a465650bd58aef6ee248ca402} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} mouse\+\_\+write\+\_\+command (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{command}{}\end{DoxyParamCaption})}
+
+
+
+Writes mouse command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & command to be written to mouse \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}

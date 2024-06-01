@@ -1,0 +1,18 @@
+\doxysection{src/model/button.h File Reference}
+\hypertarget{button_8h}{}\label{button_8h}\index{src/model/button.h@{src/model/button.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}sprite.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_button}{Button}}
+\begin{DoxyCompactList}\small\item\em Struct for the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__button_ga9e36667de45ad911f059419e53b6acda}{construct\+\_\+button}} (int16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, int16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}}, int16\+\_\+t w, int16\+\_\+t h, char \texorpdfstring{$\ast$}{*}xpm\mbox{[}$\,$\mbox{]}, char \texorpdfstring{$\ast$}{*}xpm\+\_\+selected\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_button}{Button} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__button_ga1cc54e71c27606b483f95416693f5221}{check\+\_\+button}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button, int16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, int16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Updates button state (selected/unselected) accordingly to cursor coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__button_ga6b75c612ee123b9b3261a831fd6d805b}{destroy\+\_\+button}} (\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*}button)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_button}{Button} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}

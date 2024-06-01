@@ -1,0 +1,68 @@
+\doxysection{src/view/menu\+\_\+view.c File Reference}
+\hypertarget{menu__view_8c}{}\label{menu__view_8c}\index{src/view/menu\_view.c@{src/view/menu\_view.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}menu\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}../model/menu.\+h"{}}\newline
+{\ttfamily \#include "{}button\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}cursor\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}sprite\+\_\+view.\+h"{}}\newline
+{\ttfamily \#include "{}controller/rtc.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__menu__view_ga7d771989b41395d6d703f523c6fc22eb}{draw\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em Draws the menu (in the current state) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu__view_8c_a61ba300276026fb92f097be82da22d7c}{play}}
+\item 
+\mbox{\hyperlink{struct_button}{Button}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu__view_8c_ae131808683f79c385a8658e291f11d93}{quit}}
+\item 
+\mbox{\hyperlink{struct_cursor}{Cursor}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menu__view_8c_affedf88398e13541460b554f260d09ff}{cursor\+\_\+menu}}
+\item 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} \mbox{\hyperlink{menu__view_8c_ae4d8e969edb29d761dc83769f4221979}{time\+\_\+info}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{menu__view_8c_a85cc0f4334633f7f998e2d55e15aa948}{x\+\_\+max}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{menu__view_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}{y\+\_\+max}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{menu__view_8c_affedf88398e13541460b554f260d09ff}\index{menu\_view.c@{menu\_view.c}!cursor\_menu@{cursor\_menu}}
+\index{cursor\_menu@{cursor\_menu}!menu\_view.c@{menu\_view.c}}
+\doxysubsubsection{\texorpdfstring{cursor\_menu}{cursor\_menu}}
+{\footnotesize\ttfamily \label{menu__view_8c_affedf88398e13541460b554f260d09ff} 
+\mbox{\hyperlink{struct_cursor}{Cursor}}\texorpdfstring{$\ast$}{*} cursor\+\_\+menu\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{menu__view_8c_a61ba300276026fb92f097be82da22d7c}\index{menu\_view.c@{menu\_view.c}!play@{play}}
+\index{play@{play}!menu\_view.c@{menu\_view.c}}
+\doxysubsubsection{\texorpdfstring{play}{play}}
+{\footnotesize\ttfamily \label{menu__view_8c_a61ba300276026fb92f097be82da22d7c} 
+\mbox{\hyperlink{struct_button}{Button}}\texorpdfstring{$\ast$}{*} play\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{menu__view_8c_ae131808683f79c385a8658e291f11d93}\index{menu\_view.c@{menu\_view.c}!quit@{quit}}
+\index{quit@{quit}!menu\_view.c@{menu\_view.c}}
+\doxysubsubsection{\texorpdfstring{quit}{quit}}
+{\footnotesize\ttfamily \label{menu__view_8c_ae131808683f79c385a8658e291f11d93} 
+\mbox{\hyperlink{struct_button}{Button}}\texorpdfstring{$\ast$}{*} quit\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{menu__view_8c_ae4d8e969edb29d761dc83769f4221979}\index{menu\_view.c@{menu\_view.c}!time\_info@{time\_info}}
+\index{time\_info@{time\_info}!menu\_view.c@{menu\_view.c}}
+\doxysubsubsection{\texorpdfstring{time\_info}{time\_info}}
+{\footnotesize\ttfamily \label{menu__view_8c_ae4d8e969edb29d761dc83769f4221979} 
+\mbox{\hyperlink{structreal__time__info}{real\+\_\+time\+\_\+info}} time\+\_\+info\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{menu__view_8c_a85cc0f4334633f7f998e2d55e15aa948}\index{menu\_view.c@{menu\_view.c}!x\_max@{x\_max}}
+\index{x\_max@{x\_max}!menu\_view.c@{menu\_view.c}}
+\doxysubsubsection{\texorpdfstring{x\_max}{x\_max}}
+{\footnotesize\ttfamily \label{menu__view_8c_a85cc0f4334633f7f998e2d55e15aa948} 
+uint16\+\_\+t x\+\_\+max\hspace{0.3cm}{\ttfamily [extern]}}
+
+\Hypertarget{menu__view_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}\index{menu\_view.c@{menu\_view.c}!y\_max@{y\_max}}
+\index{y\_max@{y\_max}!menu\_view.c@{menu\_view.c}}
+\doxysubsubsection{\texorpdfstring{y\_max}{y\_max}}
+{\footnotesize\ttfamily \label{menu__view_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc} 
+uint16\+\_\+t y\+\_\+max\hspace{0.3cm}{\ttfamily [extern]}}
+

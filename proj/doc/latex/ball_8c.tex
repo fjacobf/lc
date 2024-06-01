@@ -1,0 +1,46 @@
+\doxysection{src/model/ball.c File Reference}
+\hypertarget{ball_8c}{}\label{ball_8c}\index{src/model/ball.c@{src/model/ball.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}ball.\+h"{}}\newline
+{\ttfamily \#include "{}../xpm/ball.\+xpm"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ball_8c_a6e6e3e0a95ff9d34f318395729bb22fc}{BALL\+\_\+\+TRANSPARENT\+\_\+\+COLOR}}~0x818181
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__ball_ga8f545cbd600ec6cc400c3483b51c8bcb}{construct\+\_\+ball}} (int16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, int16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}}, int8\+\_\+t vx, int8\+\_\+t vy)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_ball}{Ball} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__ball_gaab4598aab3eb70fa3d21e6f09cda4b2a}{move\+\_\+ball}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_a85cc0f4334633f7f998e2d55e15aa948}{x\+\_\+max}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}{y\+\_\+max}})
+\begin{DoxyCompactList}\small\item\em Updates ball position and velocity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__ball_ga87104fc6eaa2ceaa4c5fafb7d511cf09}{move\+\_\+ball\+\_\+after\+\_\+collision\+\_\+with\+\_\+wall}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}}, \mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall)
+\begin{DoxyCompactList}\small\item\em Updates ball position and velocity after collision with wall. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__ball_ga86138e436b462d916fc4146f73fcfd65}{speedup\+\_\+ball}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}})
+\begin{DoxyCompactList}\small\item\em Doubles ball velocity (in both directions, horizontal and vertical) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__ball_gacd5f0ca3e76fbf07c860b847fc9c3c24}{destroy\+\_\+ball}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_ball}{Ball} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{ball_8c_abe902382ebcf927bbba5c0d47bf53138}{score}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{ball_8c_a6e6e3e0a95ff9d34f318395729bb22fc}\index{ball.c@{ball.c}!BALL\_TRANSPARENT\_COLOR@{BALL\_TRANSPARENT\_COLOR}}
+\index{BALL\_TRANSPARENT\_COLOR@{BALL\_TRANSPARENT\_COLOR}!ball.c@{ball.c}}
+\doxysubsubsection{\texorpdfstring{BALL\_TRANSPARENT\_COLOR}{BALL\_TRANSPARENT\_COLOR}}
+{\footnotesize\ttfamily \label{ball_8c_a6e6e3e0a95ff9d34f318395729bb22fc} 
+\#define BALL\+\_\+\+TRANSPARENT\+\_\+\+COLOR~0x818181}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{ball_8c_abe902382ebcf927bbba5c0d47bf53138}\index{ball.c@{ball.c}!score@{score}}
+\index{score@{score}!ball.c@{ball.c}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily \label{ball_8c_abe902382ebcf927bbba5c0d47bf53138} 
+uint32\+\_\+t score\hspace{0.3cm}{\ttfamily [extern]}}
+

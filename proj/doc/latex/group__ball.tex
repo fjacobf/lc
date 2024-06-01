@@ -1,0 +1,125 @@
+\doxysection{ball}
+\hypertarget{group__ball}{}\label{group__ball}\index{ball@{ball}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_ball}{Ball}}
+\begin{DoxyCompactList}\small\item\em Struct for the ball. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__ball_ga8f545cbd600ec6cc400c3483b51c8bcb}{construct\+\_\+ball}} (int16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, int16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}}, int8\+\_\+t vx, int8\+\_\+t vy)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_ball}{Ball} constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__ball_gaab4598aab3eb70fa3d21e6f09cda4b2a}{move\+\_\+ball}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_a85cc0f4334633f7f998e2d55e15aa948}{x\+\_\+max}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_a6c2ea0e2f3ad699f6b5bb36f4ada9abc}{y\+\_\+max}})
+\begin{DoxyCompactList}\small\item\em Updates ball position and velocity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__ball_ga87104fc6eaa2ceaa4c5fafb7d511cf09}{move\+\_\+ball\+\_\+after\+\_\+collision\+\_\+with\+\_\+wall}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}}, \mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}wall)
+\begin{DoxyCompactList}\small\item\em Updates ball position and velocity after collision with wall. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__ball_ga86138e436b462d916fc4146f73fcfd65}{speedup\+\_\+ball}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}})
+\begin{DoxyCompactList}\small\item\em Doubles ball velocity (in both directions, horizontal and vertical) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__ball_gacd5f0ca3e76fbf07c860b847fc9c3c24}{destroy\+\_\+ball}} (\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{game_8c_aacc87c0b27b8412049520b1498472156}{ball}})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_ball}{Ball} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to the ball 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__ball_ga8f545cbd600ec6cc400c3483b51c8bcb}\index{ball@{ball}!construct\_ball@{construct\_ball}}
+\index{construct\_ball@{construct\_ball}!ball@{ball}}
+\doxysubsubsection{\texorpdfstring{construct\_ball()}{construct\_ball()}}
+{\footnotesize\ttfamily \label{group__ball_ga8f545cbd600ec6cc400c3483b51c8bcb} 
+\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*} construct\+\_\+ball (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{x}{, }\item[{int16\+\_\+t}]{y}{, }\item[{int8\+\_\+t}]{vx}{, }\item[{int8\+\_\+t}]{vy}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_ball}{Ball} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & horizontal coordinate of the ball \\
+\hline
+{\em y} & vertical coordinate of the ball \\
+\hline
+{\em vx} & horizontal velocity of the ball \\
+\hline
+{\em vy} & vertical velocity of the ball \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Constructed ball on success, NULL otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__ball_gacd5f0ca3e76fbf07c860b847fc9c3c24}\index{ball@{ball}!destroy\_ball@{destroy\_ball}}
+\index{destroy\_ball@{destroy\_ball}!ball@{ball}}
+\doxysubsubsection{\texorpdfstring{destroy\_ball()}{destroy\_ball()}}
+{\footnotesize\ttfamily \label{group__ball_gacd5f0ca3e76fbf07c860b847fc9c3c24} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} destroy\+\_\+ball (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}}]{ball}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_ball}{Ball} destructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & pointer to the ball to be destroyed \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__ball_gaab4598aab3eb70fa3d21e6f09cda4b2a}\index{ball@{ball}!move\_ball@{move\_ball}}
+\index{move\_ball@{move\_ball}!ball@{ball}}
+\doxysubsubsection{\texorpdfstring{move\_ball()}{move\_ball()}}
+{\footnotesize\ttfamily \label{group__ball_gaab4598aab3eb70fa3d21e6f09cda4b2a} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} move\+\_\+ball (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}}]{ball}{, }\item[{uint16\+\_\+t}]{x\+\_\+max}{, }\item[{uint16\+\_\+t}]{y\+\_\+max}{}\end{DoxyParamCaption})}
+
+
+
+Updates ball position and velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & pointer to the ball to be updated/moved \\
+\hline
+{\em x\+\_\+max} & maximum horizontal coordinate of the ball (screen limit/boundary) \\
+\hline
+{\em y\+\_\+max} & maximum vertical coordinate of the ball (screen limit/boundary) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__ball_ga87104fc6eaa2ceaa4c5fafb7d511cf09}\index{ball@{ball}!move\_ball\_after\_collision\_with\_wall@{move\_ball\_after\_collision\_with\_wall}}
+\index{move\_ball\_after\_collision\_with\_wall@{move\_ball\_after\_collision\_with\_wall}!ball@{ball}}
+\doxysubsubsection{\texorpdfstring{move\_ball\_after\_collision\_with\_wall()}{move\_ball\_after\_collision\_with\_wall()}}
+{\footnotesize\ttfamily \label{group__ball_ga87104fc6eaa2ceaa4c5fafb7d511cf09} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} move\+\_\+ball\+\_\+after\+\_\+collision\+\_\+with\+\_\+wall (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}}]{ball}{, }\item[{\mbox{\hyperlink{struct_wall}{Wall}} \texorpdfstring{$\ast$}{*}}]{wall}{}\end{DoxyParamCaption})}
+
+
+
+Updates ball position and velocity after collision with wall. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & pointer to the ball to be updated/moved \\
+\hline
+{\em wall} & pointer to the wall that the ball collided with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__ball_ga86138e436b462d916fc4146f73fcfd65}\index{ball@{ball}!speedup\_ball@{speedup\_ball}}
+\index{speedup\_ball@{speedup\_ball}!ball@{ball}}
+\doxysubsubsection{\texorpdfstring{speedup\_ball()}{speedup\_ball()}}
+{\footnotesize\ttfamily \label{group__ball_ga86138e436b462d916fc4146f73fcfd65} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} speedup\+\_\+ball (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_ball}{Ball}} \texorpdfstring{$\ast$}{*}}]{ball}{}\end{DoxyParamCaption})}
+
+
+
+Doubles ball velocity (in both directions, horizontal and vertical) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ball} & pointer to the ball to be updated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}

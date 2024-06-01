@@ -1,0 +1,105 @@
+\doxysection{keyboard}
+\hypertarget{group__keyboard}{}\label{group__keyboard}\index{keyboard@{keyboard}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structscancode}{scancode}}
+\begin{DoxyCompactList}\small\item\em Struct for scancodes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_ga8eee4d0a15beada731a514481b5ad4bf}{keyboard\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes and enables keyboard interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_gac95aea27a5e91b363b876fed881f368f}{keyboard\+\_\+unsubscribe\+\_\+int}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes keyboard interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} (keyboard\+\_\+read\+\_\+scancode\+\_\+byte())
+\begin{DoxyCompactList}\small\item\em Reads the scancode byte from the output buffer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__keyboard_gab9e6ed7960d60aa4834f2038247d4536}{kbc\+\_\+ih}} ()
+\begin{DoxyCompactList}\small\item\em Keyboard interrupt handler. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{group__keyboard_ga67de9d1e2429d220c07608449d54ebe0}{keyboard\+\_\+restore}} ()
+\begin{DoxyCompactList}\small\item\em Restores keyboard (resets scancode) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__keyboard_ga1944fd3a1e8c15001ab35dc85ea5c745}{keyboard\+\_\+enable\+\_\+interrupts}} ()
+\begin{DoxyCompactList}\small\item\em Enables keyboard interrupts, by writing an appropriate KBC command byte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for using the keyboard 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}\index{keyboard@{keyboard}!int@{int}}
+\index{int@{int}!keyboard@{keyboard}}
+\doxysubsubsection{\texorpdfstring{int()}{int()}}
+{\footnotesize\ttfamily \label{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b} 
+int (\begin{DoxyParamCaption}\item[{keyboard\+\_\+read\+\_\+scancode\+\_\+byte()}]{}{}\end{DoxyParamCaption})}
+
+
+
+Reads the scancode byte from the output buffer. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__keyboard_gab9e6ed7960d60aa4834f2038247d4536}\index{keyboard@{keyboard}!kbc\_ih@{kbc\_ih}}
+\index{kbc\_ih@{kbc\_ih}!keyboard@{keyboard}}
+\doxysubsubsection{\texorpdfstring{kbc\_ih()}{kbc\_ih()}}
+{\footnotesize\ttfamily \label{group__keyboard_gab9e6ed7960d60aa4834f2038247d4536} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} kbc\+\_\+ih (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Keyboard interrupt handler. 
+
+Calls keyboard\+\_\+read\+\_\+scancode\+\_\+byte(). \Hypertarget{group__keyboard_ga1944fd3a1e8c15001ab35dc85ea5c745}\index{keyboard@{keyboard}!keyboard\_enable\_interrupts@{keyboard\_enable\_interrupts}}
+\index{keyboard\_enable\_interrupts@{keyboard\_enable\_interrupts}!keyboard@{keyboard}}
+\doxysubsubsection{\texorpdfstring{keyboard\_enable\_interrupts()}{keyboard\_enable\_interrupts()}}
+{\footnotesize\ttfamily \label{group__keyboard_ga1944fd3a1e8c15001ab35dc85ea5c745} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} keyboard\+\_\+enable\+\_\+interrupts (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Enables keyboard interrupts, by writing an appropriate KBC command byte. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__keyboard_ga67de9d1e2429d220c07608449d54ebe0}\index{keyboard@{keyboard}!keyboard\_restore@{keyboard\_restore}}
+\index{keyboard\_restore@{keyboard\_restore}!keyboard@{keyboard}}
+\doxysubsubsection{\texorpdfstring{keyboard\_restore()}{keyboard\_restore()}}
+{\footnotesize\ttfamily \label{group__keyboard_ga67de9d1e2429d220c07608449d54ebe0} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} keyboard\+\_\+restore (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Restores keyboard (resets scancode) 
+
+\Hypertarget{group__keyboard_ga8eee4d0a15beada731a514481b5ad4bf}\index{keyboard@{keyboard}!keyboard\_subscribe\_int@{keyboard\_subscribe\_int}}
+\index{keyboard\_subscribe\_int@{keyboard\_subscribe\_int}!keyboard@{keyboard}}
+\doxysubsubsection{\texorpdfstring{keyboard\_subscribe\_int()}{keyboard\_subscribe\_int()}}
+{\footnotesize\ttfamily \label{group__keyboard_ga8eee4d0a15beada731a514481b5ad4bf} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} keyboard\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables keyboard interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+\_\+no} & address of memory to be initialized with the bit number to be set in the mask returned upon an interrupt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__keyboard_gac95aea27a5e91b363b876fed881f368f}\index{keyboard@{keyboard}!keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}}
+\index{keyboard\_unsubscribe\_int@{keyboard\_unsubscribe\_int}!keyboard@{keyboard}}
+\doxysubsubsection{\texorpdfstring{keyboard\_unsubscribe\_int()}{keyboard\_unsubscribe\_int()}}
+{\footnotesize\ttfamily \label{group__keyboard_gac95aea27a5e91b363b876fed881f368f} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} keyboard\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Unsubscribes keyboard interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}

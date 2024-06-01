@@ -1,0 +1,31 @@
+\doxysection{sprite.\+h}
+\hypertarget{sprite_8h_source}{}\label{sprite_8h_source}\index{src/model/sprite.h@{src/model/sprite.h}}
+\mbox{\hyperlink{sprite_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_SPRITE\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_SPRITE\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{video_8h}{../controller/video.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00016\ \ \ uint16\_t\ \mbox{\hyperlink{struct_sprite_a81c9f8d0b8c3b49d770be14dbe9f0d37}{height}};\ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ uint16\_t\ \mbox{\hyperlink{struct_sprite_ad0eab1042455a2067c812ab8071d5376}{width}};\ \ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ uint32\_t\ *\mbox{\hyperlink{struct_sprite_a2f298e6f85ff2b02f0f2b62169fadf23}{colors}};\ \ \ \ }
+\DoxyCodeLine{00019\ \ \ uint32\_t\ \mbox{\hyperlink{struct_sprite_a936176d8851b704dbdd0bb8d1e6bb43b}{background}};\ }
+\DoxyCodeLine{00020\ \}\ \mbox{\hyperlink{struct_sprite}{Sprite}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00029\ \mbox{\hyperlink{struct_sprite}{Sprite}}\ *\mbox{\hyperlink{group__sprite_ga07809139be0eece64c9b839b18d61d61}{construct\_sprite}}(xpm\_map\_t\ xpm,\ uint32\_t\ background);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__sprite_ga607cfeb4f019a84c346eb3bce9da0420}{destroy\_sprite}}(\mbox{\hyperlink{struct_sprite}{Sprite}}\ *sprite);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__sprite_gab32e013b98922f4ec574d9848a8452c2}{construct\_numbers}}();}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__sprite_ga71ae7e6eb4898555616d90ae43cc1cc1}{destroy\_numbers}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{group__sprite_ga0d9edd19a19629ec1b9c7224128cd6b5}{construct\_background}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{group__sprite_gae85f24174943234a086fedd93214d5a7}{destroy\_background}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_SPRITE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

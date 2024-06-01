@@ -1,0 +1,72 @@
+\doxysection{src/controller/timer.c File Reference}
+\hypertarget{timer_8c}{}\label{timer_8c}\index{src/controller/timer.c@{src/controller/timer.c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include "{}i8254.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{timer_8c_aca1506be74dfc71c6f90772ca269c619}{timer\+\_\+set\+\_\+frequency}} (uint8\+\_\+t timer, uint32\+\_\+t freq)
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{timer_8c_a6f786481e80308348d629d605ffa2d84}{timer\+\_\+subscribe\+\_\+int}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}bit\+\_\+no)
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{timer_8c_ab9eea51549744bca5c5c923b388bb4ee}{timer\+\_\+unsubscribe\+\_\+int}} ()
+\item 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} \mbox{\hyperlink{timer_8c_a10fc9c867b15c7da6649311c9987cd17}{timer\+\_\+int\+\_\+handler}} ()
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{timer_8c_afafc1891c876602d55b894103b1841a7}{timer\+\_\+get\+\_\+conf}} (uint8\+\_\+t timer, uint8\+\_\+t \texorpdfstring{$\ast$}{*}st)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{timer_8c_a51322ddb267b4729d6b5f2bb05d49fff}{counter}} = 0
+\item 
+int32\+\_\+t \mbox{\hyperlink{timer_8c_af1b0191d4601df9f1d093ee839eb1ef2}{timer\+\_\+hook\+\_\+id}} = \mbox{\hyperlink{group__i8254_ga30bf84c312af248cb81bb224e09f9ba8}{TIMER0\+\_\+\+IRQ}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{timer_8c_afafc1891c876602d55b894103b1841a7}\index{timer.c@{timer.c}!timer\_get\_conf@{timer\_get\_conf}}
+\index{timer\_get\_conf@{timer\_get\_conf}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_get\_conf()}{timer\_get\_conf()}}
+{\footnotesize\ttfamily \label{timer_8c_afafc1891c876602d55b894103b1841a7} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} timer\+\_\+get\+\_\+conf (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer}{, }\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{st}{}\end{DoxyParamCaption})}
+
+\Hypertarget{timer_8c_a10fc9c867b15c7da6649311c9987cd17}\index{timer.c@{timer.c}!timer\_int\_handler@{timer\_int\_handler}}
+\index{timer\_int\_handler@{timer\_int\_handler}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_int\_handler()}{timer\_int\_handler()}}
+{\footnotesize\ttfamily \label{timer_8c_a10fc9c867b15c7da6649311c9987cd17} 
+\mbox{\hyperlink{keyboard_8c_a9601b65a5838f1622a33914a6a94e4f3}{void}} timer\+\_\+int\+\_\+handler (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{timer_8c_aca1506be74dfc71c6f90772ca269c619}\index{timer.c@{timer.c}!timer\_set\_frequency@{timer\_set\_frequency}}
+\index{timer\_set\_frequency@{timer\_set\_frequency}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_set\_frequency()}{timer\_set\_frequency()}}
+{\footnotesize\ttfamily \label{timer_8c_aca1506be74dfc71c6f90772ca269c619} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} timer\+\_\+set\+\_\+frequency (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer}{, }\item[{uint32\+\_\+t}]{freq}{}\end{DoxyParamCaption})}
+
+\Hypertarget{timer_8c_a6f786481e80308348d629d605ffa2d84}\index{timer.c@{timer.c}!timer\_subscribe\_int@{timer\_subscribe\_int}}
+\index{timer\_subscribe\_int@{timer\_subscribe\_int}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_subscribe\_int()}{timer\_subscribe\_int()}}
+{\footnotesize\ttfamily \label{timer_8c_a6f786481e80308348d629d605ffa2d84} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} timer\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{bit\+\_\+no}{}\end{DoxyParamCaption})}
+
+\Hypertarget{timer_8c_ab9eea51549744bca5c5c923b388bb4ee}\index{timer.c@{timer.c}!timer\_unsubscribe\_int@{timer\_unsubscribe\_int}}
+\index{timer\_unsubscribe\_int@{timer\_unsubscribe\_int}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_unsubscribe\_int()}{timer\_unsubscribe\_int()}}
+{\footnotesize\ttfamily \label{timer_8c_ab9eea51549744bca5c5c923b388bb4ee} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} timer\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{timer_8c_a51322ddb267b4729d6b5f2bb05d49fff}\index{timer.c@{timer.c}!counter@{counter}}
+\index{counter@{counter}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily \label{timer_8c_a51322ddb267b4729d6b5f2bb05d49fff} 
+uint32\+\_\+t counter = 0}
+
+\Hypertarget{timer_8c_af1b0191d4601df9f1d093ee839eb1ef2}\index{timer.c@{timer.c}!timer\_hook\_id@{timer\_hook\_id}}
+\index{timer\_hook\_id@{timer\_hook\_id}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_hook\_id}{timer\_hook\_id}}
+{\footnotesize\ttfamily \label{timer_8c_af1b0191d4601df9f1d093ee839eb1ef2} 
+int32\+\_\+t timer\+\_\+hook\+\_\+id = \mbox{\hyperlink{group__i8254_ga30bf84c312af248cb81bb224e09f9ba8}{TIMER0\+\_\+\+IRQ}}}
+

@@ -1,0 +1,227 @@
+\doxysection{VBE}
+\hypertarget{group___v_b_e}{}\label{group___v_b_e}\index{VBE@{VBE}}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___v_b_e_gafec79d82bb9d02aadcdd258b666aa99e}{VBE\+\_\+\+INTNO}}~0x10
+\begin{DoxyCompactList}\small\item\em Software interrupt instruction. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gaa2c8213138881701affd9a3710dda73c}{VBE\+\_\+\+REG\+\_\+\+AH}}~0x4F
+\begin{DoxyCompactList}\small\item\em AH register value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gabe4dcb9f72d77bb09e7dc4e831c06133}{VBE\+\_\+\+FUNCTION\+\_\+\+SUPPORTED\+\_\+\+AL}}~0x4F
+\begin{DoxyCompactList}\small\item\em Value of the AL register if the function called is supported. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gaa1376137b686eaf2cf56154ba58a7385}{VBE\+\_\+\+FUNCTION\+\_\+\+SUCCESS\+\_\+\+AH}}~0x00
+\begin{DoxyCompactList}\small\item\em Value of the AH register if the function completed successfully. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_ga00d8ac56911deca44004b400e6d2f47b}{VBE\+\_\+\+FUNCTION\+\_\+\+FAILED\+\_\+\+AH}}~0x01
+\begin{DoxyCompactList}\small\item\em Value of the AH register if the function call failed. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gaafae1c272ea01b4785a29cc8bb2e2a57}{VBE\+\_\+\+FUNCTION\+\_\+\+UNSUPPORTED\+\_\+\+AH}}~0x02
+\begin{DoxyCompactList}\small\item\em Value of the AH register if the function is not supported in current HW configuration. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gabb3243b1083f3b34e84200b987b39926}{VBE\+\_\+\+FUNCTION\+\_\+\+INVALID\+\_\+\+AH}}~0x03
+\begin{DoxyCompactList}\small\item\em Value of the AH register if the function is invalid in current video mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gadebe2ec835ae8380cf68eb06570bf9fe}{VBE\+\_\+\+RETURN\+\_\+\+CONTROLLER\+\_\+\+INFO}}~0x00
+\begin{DoxyCompactList}\small\item\em VBE function to return the capabilites of the controller -\/ must provide address for returned info in registers ES\+:DI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gaa565d39b89e776fd72e7f279e4f646f9}{VBE\+\_\+\+RETURN\+\_\+\+MODE\+\_\+\+INFO}}~0x01
+\begin{DoxyCompactList}\small\item\em VBE function to return VBE mode information -\/ mode is passed on CX and must provide address for returned info in registers ES\+:DI. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_ga02477c4996ff058aee590b54f2146eb5}{VBE\+\_\+\+SET\+\_\+\+MODE}}~0x02
+\begin{DoxyCompactList}\small\item\em VBE function to initialize the controller and set a video mode -\/ mode is passed in register BX, which should have bit 14 set. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_ga6a9b7a6b5d6577456e574a0cc856428f}{VBE\+\_\+\+SET\+\_\+\+GET\+\_\+\+DISPLAY\+\_\+\+START}}~0x07
+\begin{DoxyCompactList}\small\item\em VBE function to set/get pixel to be displayed in the upper left corner of the display. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_ga89677451f60b01a35c2dfa703dc23543}{VBE\+\_\+\+SET\+\_\+\+DISPLAY\+\_\+\+START}}~0x00
+\begin{DoxyCompactList}\small\item\em VBE function to set the pixel to be displayed in the upper left corner of the display. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_ga441e363301fc9a3a50ff808be7bae899}{VBE\+\_\+\+GET\+\_\+\+DISPLAY\+\_\+\+START}}~0x01
+\begin{DoxyCompactList}\small\item\em VBE function to get the pixel to be displayed in the upper left corner of the display. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_ga62863ea77198deb4e99c7aaf6df5bd3a}{VBE\+\_\+\+SET\+\_\+\+LINEAR\+\_\+\+MODE}}~BIT(14)
+\begin{DoxyCompactList}\small\item\em Set the linear frame buffer mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gac7deaecfacbf49ab64da719fbbbea227}{VBE\+\_\+\+RETURN\+\_\+\+TO\+\_\+\+TEXT\+\_\+\+MODE\+\_\+\+AH}}~0x00
+\begin{DoxyCompactList}\small\item\em Value to set the AH register to return to text mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gadd035c46ddeb47534bbe37f41ea84159}{VBE\+\_\+\+RETURN\+\_\+\+TO\+\_\+\+TEXT\+\_\+\+MODE\+\_\+\+AL}}~0x03
+\begin{DoxyCompactList}\small\item\em Value to set the AL register to return to text mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_ga46374dc6ac39e41ab9a885c8b05fb646}{VBE\+\_\+\+INDEXED\+\_\+\+COLOR\+\_\+\+MODE}}~0x105
+\begin{DoxyCompactList}\small\item\em Indexed color mode. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___v_b_e_gacb7036a0f47360d42ee2b9ade3e15131}{VBE\+\_\+\+RESERVED}}~0x00
+\begin{DoxyCompactList}\small\item\em Reserved fields must be 00h. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Constants for using VBE 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group___v_b_e_ga00d8ac56911deca44004b400e6d2f47b}\index{VBE@{VBE}!VBE\_FUNCTION\_FAILED\_AH@{VBE\_FUNCTION\_FAILED\_AH}}
+\index{VBE\_FUNCTION\_FAILED\_AH@{VBE\_FUNCTION\_FAILED\_AH}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_FUNCTION\_FAILED\_AH}{VBE\_FUNCTION\_FAILED\_AH}}
+{\footnotesize\ttfamily \label{group___v_b_e_ga00d8ac56911deca44004b400e6d2f47b} 
+\#define VBE\+\_\+\+FUNCTION\+\_\+\+FAILED\+\_\+\+AH~0x01}
+
+
+
+Value of the AH register if the function call failed. 
+
+\Hypertarget{group___v_b_e_gabb3243b1083f3b34e84200b987b39926}\index{VBE@{VBE}!VBE\_FUNCTION\_INVALID\_AH@{VBE\_FUNCTION\_INVALID\_AH}}
+\index{VBE\_FUNCTION\_INVALID\_AH@{VBE\_FUNCTION\_INVALID\_AH}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_FUNCTION\_INVALID\_AH}{VBE\_FUNCTION\_INVALID\_AH}}
+{\footnotesize\ttfamily \label{group___v_b_e_gabb3243b1083f3b34e84200b987b39926} 
+\#define VBE\+\_\+\+FUNCTION\+\_\+\+INVALID\+\_\+\+AH~0x03}
+
+
+
+Value of the AH register if the function is invalid in current video mode. 
+
+\Hypertarget{group___v_b_e_gaa1376137b686eaf2cf56154ba58a7385}\index{VBE@{VBE}!VBE\_FUNCTION\_SUCCESS\_AH@{VBE\_FUNCTION\_SUCCESS\_AH}}
+\index{VBE\_FUNCTION\_SUCCESS\_AH@{VBE\_FUNCTION\_SUCCESS\_AH}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_FUNCTION\_SUCCESS\_AH}{VBE\_FUNCTION\_SUCCESS\_AH}}
+{\footnotesize\ttfamily \label{group___v_b_e_gaa1376137b686eaf2cf56154ba58a7385} 
+\#define VBE\+\_\+\+FUNCTION\+\_\+\+SUCCESS\+\_\+\+AH~0x00}
+
+
+
+Value of the AH register if the function completed successfully. 
+
+\Hypertarget{group___v_b_e_gabe4dcb9f72d77bb09e7dc4e831c06133}\index{VBE@{VBE}!VBE\_FUNCTION\_SUPPORTED\_AL@{VBE\_FUNCTION\_SUPPORTED\_AL}}
+\index{VBE\_FUNCTION\_SUPPORTED\_AL@{VBE\_FUNCTION\_SUPPORTED\_AL}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_FUNCTION\_SUPPORTED\_AL}{VBE\_FUNCTION\_SUPPORTED\_AL}}
+{\footnotesize\ttfamily \label{group___v_b_e_gabe4dcb9f72d77bb09e7dc4e831c06133} 
+\#define VBE\+\_\+\+FUNCTION\+\_\+\+SUPPORTED\+\_\+\+AL~0x4F}
+
+
+
+Value of the AL register if the function called is supported. 
+
+\Hypertarget{group___v_b_e_gaafae1c272ea01b4785a29cc8bb2e2a57}\index{VBE@{VBE}!VBE\_FUNCTION\_UNSUPPORTED\_AH@{VBE\_FUNCTION\_UNSUPPORTED\_AH}}
+\index{VBE\_FUNCTION\_UNSUPPORTED\_AH@{VBE\_FUNCTION\_UNSUPPORTED\_AH}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_FUNCTION\_UNSUPPORTED\_AH}{VBE\_FUNCTION\_UNSUPPORTED\_AH}}
+{\footnotesize\ttfamily \label{group___v_b_e_gaafae1c272ea01b4785a29cc8bb2e2a57} 
+\#define VBE\+\_\+\+FUNCTION\+\_\+\+UNSUPPORTED\+\_\+\+AH~0x02}
+
+
+
+Value of the AH register if the function is not supported in current HW configuration. 
+
+\Hypertarget{group___v_b_e_ga441e363301fc9a3a50ff808be7bae899}\index{VBE@{VBE}!VBE\_GET\_DISPLAY\_START@{VBE\_GET\_DISPLAY\_START}}
+\index{VBE\_GET\_DISPLAY\_START@{VBE\_GET\_DISPLAY\_START}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_GET\_DISPLAY\_START}{VBE\_GET\_DISPLAY\_START}}
+{\footnotesize\ttfamily \label{group___v_b_e_ga441e363301fc9a3a50ff808be7bae899} 
+\#define VBE\+\_\+\+GET\+\_\+\+DISPLAY\+\_\+\+START~0x01}
+
+
+
+VBE function to get the pixel to be displayed in the upper left corner of the display. 
+
+\Hypertarget{group___v_b_e_ga46374dc6ac39e41ab9a885c8b05fb646}\index{VBE@{VBE}!VBE\_INDEXED\_COLOR\_MODE@{VBE\_INDEXED\_COLOR\_MODE}}
+\index{VBE\_INDEXED\_COLOR\_MODE@{VBE\_INDEXED\_COLOR\_MODE}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_INDEXED\_COLOR\_MODE}{VBE\_INDEXED\_COLOR\_MODE}}
+{\footnotesize\ttfamily \label{group___v_b_e_ga46374dc6ac39e41ab9a885c8b05fb646} 
+\#define VBE\+\_\+\+INDEXED\+\_\+\+COLOR\+\_\+\+MODE~0x105}
+
+
+
+Indexed color mode. 
+
+\Hypertarget{group___v_b_e_gafec79d82bb9d02aadcdd258b666aa99e}\index{VBE@{VBE}!VBE\_INTNO@{VBE\_INTNO}}
+\index{VBE\_INTNO@{VBE\_INTNO}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_INTNO}{VBE\_INTNO}}
+{\footnotesize\ttfamily \label{group___v_b_e_gafec79d82bb9d02aadcdd258b666aa99e} 
+\#define VBE\+\_\+\+INTNO~0x10}
+
+
+
+Software interrupt instruction. 
+
+\Hypertarget{group___v_b_e_gaa2c8213138881701affd9a3710dda73c}\index{VBE@{VBE}!VBE\_REG\_AH@{VBE\_REG\_AH}}
+\index{VBE\_REG\_AH@{VBE\_REG\_AH}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_REG\_AH}{VBE\_REG\_AH}}
+{\footnotesize\ttfamily \label{group___v_b_e_gaa2c8213138881701affd9a3710dda73c} 
+\#define VBE\+\_\+\+REG\+\_\+\+AH~0x4F}
+
+
+
+AH register value. 
+
+\Hypertarget{group___v_b_e_gacb7036a0f47360d42ee2b9ade3e15131}\index{VBE@{VBE}!VBE\_RESERVED@{VBE\_RESERVED}}
+\index{VBE\_RESERVED@{VBE\_RESERVED}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_RESERVED}{VBE\_RESERVED}}
+{\footnotesize\ttfamily \label{group___v_b_e_gacb7036a0f47360d42ee2b9ade3e15131} 
+\#define VBE\+\_\+\+RESERVED~0x00}
+
+
+
+Reserved fields must be 00h. 
+
+\Hypertarget{group___v_b_e_gadebe2ec835ae8380cf68eb06570bf9fe}\index{VBE@{VBE}!VBE\_RETURN\_CONTROLLER\_INFO@{VBE\_RETURN\_CONTROLLER\_INFO}}
+\index{VBE\_RETURN\_CONTROLLER\_INFO@{VBE\_RETURN\_CONTROLLER\_INFO}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_RETURN\_CONTROLLER\_INFO}{VBE\_RETURN\_CONTROLLER\_INFO}}
+{\footnotesize\ttfamily \label{group___v_b_e_gadebe2ec835ae8380cf68eb06570bf9fe} 
+\#define VBE\+\_\+\+RETURN\+\_\+\+CONTROLLER\+\_\+\+INFO~0x00}
+
+
+
+VBE function to return the capabilites of the controller -\/ must provide address for returned info in registers ES\+:DI. 
+
+\Hypertarget{group___v_b_e_gaa565d39b89e776fd72e7f279e4f646f9}\index{VBE@{VBE}!VBE\_RETURN\_MODE\_INFO@{VBE\_RETURN\_MODE\_INFO}}
+\index{VBE\_RETURN\_MODE\_INFO@{VBE\_RETURN\_MODE\_INFO}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_RETURN\_MODE\_INFO}{VBE\_RETURN\_MODE\_INFO}}
+{\footnotesize\ttfamily \label{group___v_b_e_gaa565d39b89e776fd72e7f279e4f646f9} 
+\#define VBE\+\_\+\+RETURN\+\_\+\+MODE\+\_\+\+INFO~0x01}
+
+
+
+VBE function to return VBE mode information -\/ mode is passed on CX and must provide address for returned info in registers ES\+:DI. 
+
+\Hypertarget{group___v_b_e_gac7deaecfacbf49ab64da719fbbbea227}\index{VBE@{VBE}!VBE\_RETURN\_TO\_TEXT\_MODE\_AH@{VBE\_RETURN\_TO\_TEXT\_MODE\_AH}}
+\index{VBE\_RETURN\_TO\_TEXT\_MODE\_AH@{VBE\_RETURN\_TO\_TEXT\_MODE\_AH}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_RETURN\_TO\_TEXT\_MODE\_AH}{VBE\_RETURN\_TO\_TEXT\_MODE\_AH}}
+{\footnotesize\ttfamily \label{group___v_b_e_gac7deaecfacbf49ab64da719fbbbea227} 
+\#define VBE\+\_\+\+RETURN\+\_\+\+TO\+\_\+\+TEXT\+\_\+\+MODE\+\_\+\+AH~0x00}
+
+
+
+Value to set the AH register to return to text mode. 
+
+\Hypertarget{group___v_b_e_gadd035c46ddeb47534bbe37f41ea84159}\index{VBE@{VBE}!VBE\_RETURN\_TO\_TEXT\_MODE\_AL@{VBE\_RETURN\_TO\_TEXT\_MODE\_AL}}
+\index{VBE\_RETURN\_TO\_TEXT\_MODE\_AL@{VBE\_RETURN\_TO\_TEXT\_MODE\_AL}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_RETURN\_TO\_TEXT\_MODE\_AL}{VBE\_RETURN\_TO\_TEXT\_MODE\_AL}}
+{\footnotesize\ttfamily \label{group___v_b_e_gadd035c46ddeb47534bbe37f41ea84159} 
+\#define VBE\+\_\+\+RETURN\+\_\+\+TO\+\_\+\+TEXT\+\_\+\+MODE\+\_\+\+AL~0x03}
+
+
+
+Value to set the AL register to return to text mode. 
+
+\Hypertarget{group___v_b_e_ga89677451f60b01a35c2dfa703dc23543}\index{VBE@{VBE}!VBE\_SET\_DISPLAY\_START@{VBE\_SET\_DISPLAY\_START}}
+\index{VBE\_SET\_DISPLAY\_START@{VBE\_SET\_DISPLAY\_START}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_SET\_DISPLAY\_START}{VBE\_SET\_DISPLAY\_START}}
+{\footnotesize\ttfamily \label{group___v_b_e_ga89677451f60b01a35c2dfa703dc23543} 
+\#define VBE\+\_\+\+SET\+\_\+\+DISPLAY\+\_\+\+START~0x00}
+
+
+
+VBE function to set the pixel to be displayed in the upper left corner of the display. 
+
+\Hypertarget{group___v_b_e_ga6a9b7a6b5d6577456e574a0cc856428f}\index{VBE@{VBE}!VBE\_SET\_GET\_DISPLAY\_START@{VBE\_SET\_GET\_DISPLAY\_START}}
+\index{VBE\_SET\_GET\_DISPLAY\_START@{VBE\_SET\_GET\_DISPLAY\_START}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_SET\_GET\_DISPLAY\_START}{VBE\_SET\_GET\_DISPLAY\_START}}
+{\footnotesize\ttfamily \label{group___v_b_e_ga6a9b7a6b5d6577456e574a0cc856428f} 
+\#define VBE\+\_\+\+SET\+\_\+\+GET\+\_\+\+DISPLAY\+\_\+\+START~0x07}
+
+
+
+VBE function to set/get pixel to be displayed in the upper left corner of the display. 
+
+\Hypertarget{group___v_b_e_ga62863ea77198deb4e99c7aaf6df5bd3a}\index{VBE@{VBE}!VBE\_SET\_LINEAR\_MODE@{VBE\_SET\_LINEAR\_MODE}}
+\index{VBE\_SET\_LINEAR\_MODE@{VBE\_SET\_LINEAR\_MODE}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_SET\_LINEAR\_MODE}{VBE\_SET\_LINEAR\_MODE}}
+{\footnotesize\ttfamily \label{group___v_b_e_ga62863ea77198deb4e99c7aaf6df5bd3a} 
+\#define VBE\+\_\+\+SET\+\_\+\+LINEAR\+\_\+\+MODE~BIT(14)}
+
+
+
+Set the linear frame buffer mode. 
+
+\Hypertarget{group___v_b_e_ga02477c4996ff058aee590b54f2146eb5}\index{VBE@{VBE}!VBE\_SET\_MODE@{VBE\_SET\_MODE}}
+\index{VBE\_SET\_MODE@{VBE\_SET\_MODE}!VBE@{VBE}}
+\doxysubsubsection{\texorpdfstring{VBE\_SET\_MODE}{VBE\_SET\_MODE}}
+{\footnotesize\ttfamily \label{group___v_b_e_ga02477c4996ff058aee590b54f2146eb5} 
+\#define VBE\+\_\+\+SET\+\_\+\+MODE~0x02}
+
+
+
+VBE function to initialize the controller and set a video mode -\/ mode is passed in register BX, which should have bit 14 set. 
+

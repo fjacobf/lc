@@ -1,0 +1,166 @@
+\doxysection{sprite\+\_\+view}
+\hypertarget{group__sprite__view}{}\label{group__sprite__view}\index{sprite\_view@{sprite\_view}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gace221668fa3cbf0dda0546324d75beae}{draw\+\_\+sprite}} (\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}sprite, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_sprite}{Sprite} drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gaeecb54ece606d3cfbcde3bdac5adc480}{draw\+\_\+times}} (uint16\+\_\+t, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Times symbol (cross -\/ x) drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_ga4d01b37496a4c1f3ebace73ea9071553}{draw\+\_\+digit}} (uint8\+\_\+t digit, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Digit \mbox{[}0-\/9\mbox{]} drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gad7f61052219664fd09baafa1683835d8}{draw\+\_\+number}} (uint32\+\_\+t number, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Number drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gabab126dd4f5bf5b0f35d57e86a3cb022}{draw\+\_\+time}} (uint32\+\_\+t number, uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Time drawer -\/ draws with the extra zeros in the left. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_gacaaa925730376722f900e05b8ab4ecf8}{draw\+\_\+colon}} (uint16\+\_\+t \mbox{\hyperlink{game_8c_ae1c2d516777e6b42af0d281c9ecc7375}{x}}, uint16\+\_\+t \mbox{\hyperlink{game_8c_af77b1a54442f2443cf64a4766f916bcd}{y}})
+\begin{DoxyCompactList}\small\item\em Colon symbol (cross -\/ \+:) drawer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} \mbox{\hyperlink{group__sprite__view_ga09ebdae696e727aa1eedc2212db0181e}{draw\+\_\+sunny\+\_\+background}} ()
+\begin{DoxyCompactList}\small\item\em draws the background \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions related to the sprite view 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__sprite__view_gacaaa925730376722f900e05b8ab4ecf8}\index{sprite\_view@{sprite\_view}!draw\_colon@{draw\_colon}}
+\index{draw\_colon@{draw\_colon}!sprite\_view@{sprite\_view}}
+\doxysubsubsection{\texorpdfstring{draw\_colon()}{draw\_colon()}}
+{\footnotesize\ttfamily \label{group__sprite__view_gacaaa925730376722f900e05b8ab4ecf8} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} draw\+\_\+colon (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Colon symbol (cross -\/ \+:) drawer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate where to draw the times symbol \\
+\hline
+{\em y} & y-\/coordinate where to draw the times symbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite__view_ga4d01b37496a4c1f3ebace73ea9071553}\index{sprite\_view@{sprite\_view}!draw\_digit@{draw\_digit}}
+\index{draw\_digit@{draw\_digit}!sprite\_view@{sprite\_view}}
+\doxysubsubsection{\texorpdfstring{draw\_digit()}{draw\_digit()}}
+{\footnotesize\ttfamily \label{group__sprite__view_ga4d01b37496a4c1f3ebace73ea9071553} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} draw\+\_\+digit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{digit}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Digit \mbox{[}0-\/9\mbox{]} drawer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digit} & digit to be drawn \\
+\hline
+{\em x} & x-\/coordinate where to draw the digt \\
+\hline
+{\em y} & y-\/coordinate where to draw the digit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite__view_gad7f61052219664fd09baafa1683835d8}\index{sprite\_view@{sprite\_view}!draw\_number@{draw\_number}}
+\index{draw\_number@{draw\_number}!sprite\_view@{sprite\_view}}
+\doxysubsubsection{\texorpdfstring{draw\_number()}{draw\_number()}}
+{\footnotesize\ttfamily \label{group__sprite__view_gad7f61052219664fd09baafa1683835d8} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} draw\+\_\+number (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{number}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Number drawer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & number to be drawn \\
+\hline
+{\em x} & x-\/coordinate where to draw the number \\
+\hline
+{\em y} & y-\/coordinate where to draw the number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite__view_gace221668fa3cbf0dda0546324d75beae}\index{sprite\_view@{sprite\_view}!draw\_sprite@{draw\_sprite}}
+\index{draw\_sprite@{draw\_sprite}!sprite\_view@{sprite\_view}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite()}{draw\_sprite()}}
+{\footnotesize\ttfamily \label{group__sprite__view_gace221668fa3cbf0dda0546324d75beae} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} draw\+\_\+sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sprite}{Sprite}} \texorpdfstring{$\ast$}{*}}]{sprite}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_sprite}{Sprite} drawer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sprite} & pointer to the sprite to be drawn \\
+\hline
+{\em x} & x-\/coordinate where to draw the sprite \\
+\hline
+{\em y} & y-\/coordinate where to draw the sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite__view_ga09ebdae696e727aa1eedc2212db0181e}\index{sprite\_view@{sprite\_view}!draw\_sunny\_background@{draw\_sunny\_background}}
+\index{draw\_sunny\_background@{draw\_sunny\_background}!sprite\_view@{sprite\_view}}
+\doxysubsubsection{\texorpdfstring{draw\_sunny\_background()}{draw\_sunny\_background()}}
+{\footnotesize\ttfamily \label{group__sprite__view_ga09ebdae696e727aa1eedc2212db0181e} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} draw\+\_\+sunny\+\_\+background (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+draws the background 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite__view_gabab126dd4f5bf5b0f35d57e86a3cb022}\index{sprite\_view@{sprite\_view}!draw\_time@{draw\_time}}
+\index{draw\_time@{draw\_time}!sprite\_view@{sprite\_view}}
+\doxysubsubsection{\texorpdfstring{draw\_time()}{draw\_time()}}
+{\footnotesize\ttfamily \label{group__sprite__view_gabab126dd4f5bf5b0f35d57e86a3cb022} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} draw\+\_\+time (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{number}{, }\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Time drawer -\/ draws with the extra zeros in the left. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & time to be drawn \\
+\hline
+{\em x} & x-\/coordinate where to draw the time \\
+\hline
+{\em y} & y-\/coordinate where to draw the time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+\Hypertarget{group__sprite__view_gaeecb54ece606d3cfbcde3bdac5adc480}\index{sprite\_view@{sprite\_view}!draw\_times@{draw\_times}}
+\index{draw\_times@{draw\_times}!sprite\_view@{sprite\_view}}
+\doxysubsubsection{\texorpdfstring{draw\_times()}{draw\_times()}}
+{\footnotesize\ttfamily \label{group__sprite__view_gaeecb54ece606d3cfbcde3bdac5adc480} 
+\mbox{\hyperlink{group__keyboard_gace3d7d5d8e0e2bb8d334c61890ec465b}{int}} draw\+\_\+times (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Times symbol (cross -\/ x) drawer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x-\/coordinate where to draw the times symbol \\
+\hline
+{\em y} & y-\/coordinate where to draw the times symbol \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
