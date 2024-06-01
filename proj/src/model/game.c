@@ -64,6 +64,11 @@ int start_game(uint16_t xResolution, uint16_t yResolution, uint8_t difficulty) {
     return 1;
   }
 
+  if(construct_background()){
+    printf("%s: construct_background() error\n", __func__);
+    return 1;
+  }
+
   y = wall_mouse->y;
   x_max = xResolution;
   y_max = yResolution;
@@ -149,4 +154,5 @@ void end_game() {
   destroy_wall(wall_2);
   destroy_numbers();
   destroy_wall(wall_mouse);
+  destroy_background();
 }

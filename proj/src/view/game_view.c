@@ -16,7 +16,7 @@ extern Wall *wall_mouse;
 extern Cursor *cursor_game;
 
 #define WALL_COLOR1 0xFFFF00
-#define WALL_COLOR2 0xA020F0
+#define WALL_COLOR2 0xFFA500
 #define WALL_COLOR_MOUSE 0xFF0000
 
 extern uint32_t score;
@@ -26,6 +26,11 @@ extern uint16_t x_max;
 extern uint16_t y_max;
 
 int draw_game() {
+
+  if (draw_sunny_background()) {
+    printf("%s: draw_times(x_max * 0.05: %f, y_max * 0.05: %f)\n", __func__, x_max * 0.05, y_max * 0.05);
+    return 1;
+  }
 
   if (draw_times(x_max * 0.05, y_max * 0.05)) {
     printf("%s: draw_times(x_max * 0.05: %f, y_max * 0.05: %f)\n", __func__, x_max * 0.05, y_max * 0.05);

@@ -67,6 +67,12 @@ int draw_time(uint32_t number, uint16_t x, uint16_t y);
  */
 int draw_colon(uint16_t x, uint16_t y);
 
+/**
+ * @brief draws the background
+ *
+ * @return Return 0 upon success and non-zero otherwise
+ */
+int draw_sunny_background();
 /**@}*/
 
 #endif /* _SPRITE_VIEW_H_ */

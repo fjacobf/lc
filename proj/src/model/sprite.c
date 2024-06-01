@@ -14,6 +14,7 @@
 #include "../xpm/9.xpm"
 #include "../xpm/x.xpm"
 #include "../xpm/colon.xpm"
+#include "../xpm/sunny.xpm"
 
 Sprite *zero;
 Sprite *one;
@@ -27,6 +28,7 @@ Sprite *eight;
 Sprite *nine;
 Sprite *times;
 Sprite *colon;
+Sprite *sunny;
 
 #define NUMBER_BACKGROUND 0xFFFFFF
 
@@ -151,4 +153,17 @@ void destroy_numbers() {
   destroy_sprite(nine);
   destroy_sprite(times);
   destroy_sprite(colon);
+}
+
+int construct_background(){
+  sunny = construct_sprite((xpm_map_t) sunny_xpm, NUMBER_BACKGROUND);
+  if (!sunny) {
+    printf("%s: construct_sprite(zero_xpm, NUMBER_BACKGROUND: 0x%x) error\n", __func__, NUMBER_BACKGROUND);
+    return 1;
+  }
+  return 0;
+}
+
+void destroy_background(){
+  destroy_sprite(sunny);
 }

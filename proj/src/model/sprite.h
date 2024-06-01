@@ -51,6 +51,22 @@ int construct_numbers();
  */
 void destroy_numbers();
 
+/**
+ * @brief Background image constructor
+ *
+ * Initializes variables with the sprites.
+ *
+ * @return Return 0 upon success and non-zero otherwise
+ */
+int construct_background();
+
+/**
+ * @brief background destructor
+ *
+ * Destroys the sprites.
+ */
+void destroy_background();
+
 /**@}*/
 
 #endif /* _SPRITE_H_ */

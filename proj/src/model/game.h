@@ -59,6 +59,7 @@ bool check_game_over();
  */
 void end_game();
 
+
 /**@}*/
 
 #endif /* _GAME_H_ */

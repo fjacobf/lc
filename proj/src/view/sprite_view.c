@@ -18,6 +18,7 @@ extern Sprite *seven;
 extern Sprite *eight;
 extern Sprite *nine;
 extern Sprite *colon;
+extern Sprite *sunny;
 
 int draw_sprite(Sprite *sprite, uint16_t x, uint16_t y) {
   uint16_t height = sprite->height;
@@ -48,6 +49,14 @@ int draw_times(uint16_t x, uint16_t y) {
 int draw_colon(uint16_t x, uint16_t y) {
   if (draw_sprite(colon, x, y)) {
     printf("%s: draw_sprite(times, x: %d, y: %d) error\n", __func__, x, y);
+    return 1;
+  }
+  return 0;
+}
+
+int draw_sunny_background() {
+  if (draw_sprite(sunny, 0, 0)) {
+    printf("%s: draw_background error\n", __func__);
     return 1;
   }
   return 0;
