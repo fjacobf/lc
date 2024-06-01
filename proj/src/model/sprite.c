@@ -13,6 +13,7 @@
 #include "../xpm/8.xpm"
 #include "../xpm/9.xpm"
 #include "../xpm/x.xpm"
+#include "../xpm/colon.xpm"
 
 Sprite *zero;
 Sprite *one;
@@ -25,6 +26,7 @@ Sprite *seven;
 Sprite *eight;
 Sprite *nine;
 Sprite *times;
+Sprite *colon;
 
 #define NUMBER_BACKGROUND 0xFFFFFF
 
@@ -127,6 +129,12 @@ int construct_numbers() {
     return 1;
   }
 
+  colon = construct_sprite((xpm_map_t) colon_xpm, NUMBER_BACKGROUND);
+  if (!colon) {
+    printf("%s: construct_sprite(x_xpm, NUMBER_BACKGROUND: 0x%x) error\n", __func__, NUMBER_BACKGROUND);
+    return 1;
+  }
+
   return 0;
 }
 
@@ -142,4 +150,5 @@ void destroy_numbers() {
   destroy_sprite(eight);
   destroy_sprite(nine);
   destroy_sprite(times);
+  destroy_sprite(colon);
 }

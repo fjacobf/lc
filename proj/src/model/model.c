@@ -145,6 +145,12 @@ void mouse_interrupt_handler() {
   }
 }
 
+void rtc_interrupt_handler() {
+  if (state == MENU){
+    rtc_menu_handler();
+  }
+}
+
 void end_pong() {
   end_game();
   end_levels();

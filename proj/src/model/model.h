@@ -48,6 +48,14 @@ void keyboard_interrupt_handler();
 void mouse_interrupt_handler();
 
 /**
+ * @brief Handles an interrupt from the rtc
+ *
+ * Handles the interrupt according to the current state, restores/resets the mouse packet and draws the new frame.
+ */
+void rtc_interrupt_handler();
+
+
+/**
  * @brief Ends pong
  *
  * Ends the game, the levels and the menu.

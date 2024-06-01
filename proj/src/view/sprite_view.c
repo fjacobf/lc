@@ -4,7 +4,7 @@
 
 #include "../controller/video.h"
 
-#define NUMBER_WIDTH 20
+#define NUMBER_WIDTH 17
 
 extern Sprite *times;
 extern Sprite *zero;
@@ -17,6 +17,7 @@ extern Sprite *six;
 extern Sprite *seven;
 extern Sprite *eight;
 extern Sprite *nine;
+extern Sprite *colon;
 
 int draw_sprite(Sprite *sprite, uint16_t x, uint16_t y) {
   uint16_t height = sprite->height;
@@ -38,6 +39,14 @@ int draw_sprite(Sprite *sprite, uint16_t x, uint16_t y) {
 
 int draw_times(uint16_t x, uint16_t y) {
   if (draw_sprite(times, x, y)) {
+    printf("%s: draw_sprite(times, x: %d, y: %d) error\n", __func__, x, y);
+    return 1;
+  }
+  return 0;
+}
+
+int draw_colon(uint16_t x, uint16_t y) {
+  if (draw_sprite(colon, x, y)) {
     printf("%s: draw_sprite(times, x: %d, y: %d) error\n", __func__, x, y);
     return 1;
   }
@@ -121,5 +130,25 @@ int draw_number(uint32_t number, uint16_t x, uint16_t y) {
     number /= 10;
     x -= NUMBER_WIDTH;
   }
+  return 0;
+}
+
+int draw_time(uint32_t number, uint16_t x, uint16_t y) {
+  uint8_t digit;
+  digit = number % 10;
+  if (draw_digit(digit, x, y)) {
+    printf("%s: draw_digit(digit: %d, x: %d, y: %d)\n", __func__, digit, x, y);
+    return 1;
+  }
+
+  number /= 10;
+  x -= NUMBER_WIDTH;
+
+  digit = number % 10;
+  if (draw_digit(digit, x, y)) {
+    printf("%s: draw_digit(digit: %d, x: %d, y: %d)\n", __func__, digit, x, y);
+    return 1;
+  }
+
   return 0;
 }

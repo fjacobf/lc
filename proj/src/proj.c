@@ -69,6 +69,11 @@ int start() {
     return 1;
   }
 
+  if (rtc_subscribe_interrupts(&rtc_irq_set)) {
+    printf("%s: rtc_subscribe_int(&rtc_irq_set) error\n", __func__);
+    return 1;
+  }
+
   if (!video_init(MODE)) {
     printf("%s: vg_init(mode: 0x%x) error\n", __func__, MODE);
     return 1;
@@ -81,17 +86,6 @@ int start() {
 
   if (draw_frame()) {
     printf("%s: draw_frame() error\n", __func__);
-    return 1;
-  }
-
-  if (rtc_subscribe_int(&rtc_irq_set)) {
-    printf("%s: rtc_subscribe_int(&rtc_irq_set) error\n", __func__);
-    return 1;
-  }
-
-  // Initialize the RTC to update every second
-  if (rtc_enable_update_interrupts()) {
-    printf("%s: rtc_enable_update_interrupts() error\n", __func__);
     return 1;
   }
 
@@ -121,7 +115,7 @@ void loop() {
           if (msg.m_notify.interrupts & BIT(mouse_irq_set))
             mouse_interrupt_handler();
           if (msg.m_notify.interrupts & BIT(rtc_irq_set))
-            rtc_int_handler();
+            rtc_interrupt_handler();
       }
     }
   }
@@ -160,7 +154,7 @@ int end() {
     return 1;
   }
 
-  if (rtc_unsubscribe_int()) {
+  if (rtc_unsubscribe_interrupts()) {
     printf("%s: rtc_unsubscribe_int() error\n", __func__);
     return 1;
   }

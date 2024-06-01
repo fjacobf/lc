@@ -1,0 +1,24 @@
+/* XPM */
+static char *colon_xpm[] = {
+/* columns rows colors chars-per-pixel */
+"17 17 2 2 ",
+"   c #FFFFFF",
+"X  c #000000",
+
+"              X X X               ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"              X X X               ",
+"                                  ",
+"              X X X               ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"          X X X X X X X           ",
+"              X X X               "};

@@ -2,11 +2,13 @@
 
 #include "menu.h"
 
+#include "sprite.h"
 #include "button.h"
 #include "cursor.h"
 
 #include "../controller/keyboard.h"
 #include "../controller/mouse.h"
+#include "controller/rtc.h"
 
 #include "../xpm/button_play.xpm"
 #include "../xpm/button_play_selected.xpm"
@@ -16,12 +18,13 @@
 extern scancode code;
 extern struct packet mouse_packet;
 
+
 Button *play = NULL;
 Button *quit = NULL;
 Cursor *cursor_menu = NULL;
 
-static uint16_t x_max;
-static uint16_t y_max;
+uint16_t x_max;
+uint16_t y_max;
 
 static int16_t x;
 static int16_t y;
@@ -42,6 +45,11 @@ int start_menu(uint16_t xResolution, uint16_t yResolution) {
   cursor_menu = construct_cursor(xResolution / 2, yResolution / 2);
   if (!cursor_menu) {
     printf("%s: construct_cursor(%d, %d) error\n", __func__, xResolution / 2, yResolution / 2);
+    return 1;
+  }
+
+  if (construct_numbers()) {
+    printf("%s: construct_numbers() error\n", __func__);
     return 1;
   }
 
@@ -80,6 +88,10 @@ void mouse_menu_handler() {
   check_button(quit, cursor_menu->x, cursor_menu->y);
 }
 
+void rtc_menu_handler(){
+  if(rtc_update_time() != 0) printf("RTC handler error\n");
+}
+
 bool check_play() {
   return play->selected;
 }
@@ -92,4 +104,5 @@ void end_menu() {
   destroy_button(play);
   destroy_button(quit);
   destroy_cursor(cursor_menu);
+  destroy_numbers();
 }

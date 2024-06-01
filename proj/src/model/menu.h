@@ -36,6 +36,14 @@ void keyboard_menu_handler();
 void mouse_menu_handler();
 
 /**
+ * @brief Handles an interrupt from the rtc when in the menu state
+ *
+ * updates the time
+ */
+void rtc_menu_handler();
+
+
+/**
  * @brief Checks if the play button is selected
  *
  * @return Return true if the play button is selected, false otherwise

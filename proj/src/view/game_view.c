@@ -26,6 +26,7 @@ extern uint16_t x_max;
 extern uint16_t y_max;
 
 int draw_game() {
+
   if (draw_times(x_max * 0.05, y_max * 0.05)) {
     printf("%s: draw_times(x_max * 0.05: %f, y_max * 0.05: %f)\n", __func__, x_max * 0.05, y_max * 0.05);
     return 1;
@@ -62,34 +63,4 @@ int draw_game() {
   }
 
   return 0;
-}
-
-void update_time_on_screen() {
-  // Get the current time from the RTC
-  uint32_t hours, minutes, seconds;
-
-  sys_outb(RTC_ADDR_REG, RTC_HOURS);
-  sys_inb(RTC_DATA_REG, &hours);
-
-  sys_outb(RTC_ADDR_REG, RTC_MINUTES);
-  sys_inb(RTC_DATA_REG, &minutes);
-
-  sys_outb(RTC_ADDR_REG, RTC_SECONDS);
-  sys_inb(RTC_DATA_REG, &seconds);
-
-  // Convert BCD to binary if necessary
-  hours = (hours >> 4) * 10 + (hours & 0x0F);
-  minutes = (minutes >> 4) * 10 + (minutes & 0x0F);
-  seconds = (seconds >> 4) * 10 + (seconds & 0x0F);
-
-  // Draw the time on the screen (adjust coordinates as necessary)
-  draw_time(hours, minutes, seconds, x_max * 0.5, y_max * 0.05);
-}
-
-void draw_time(uint32_t hours, uint32_t minutes, uint32_t seconds, int x, int y) {
-  char time_str[9];
-  sprintf(time_str, "%02u:%02u:%02u", hours, minutes, seconds);
-
-  // Draw the time string on the screen
-  vg_draw_string(x, y, time_str, COLOR_WHITE);
 }

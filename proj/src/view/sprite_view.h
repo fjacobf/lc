@@ -48,6 +48,25 @@ int draw_digit(uint8_t digit, uint16_t x, uint16_t y);
  */
 int draw_number(uint32_t number, uint16_t x, uint16_t y);
 
+/**
+ * @brief Time drawer - draws with the extra zeros in the left
+ *
+ * @param number time to be drawn
+ * @param x x-coordinate where to draw the time
+ * @param y y-coordinate where to draw the time
+ * @return Return 0 upon success and non-zero otherwise
+ */
+int draw_time(uint32_t number, uint16_t x, uint16_t y);
+
+/**
+ * @brief Colon symbol (cross - :) drawer
+ *
+ * @param x x-coordinate where to draw the times symbol
+ * @param y y-coordinate where to draw the times symbol
+ * @return Return 0 upon success and non-zero otherwise
+ */
+int draw_colon(uint16_t x, uint16_t y);
+
 /**@}*/
 
 #endif /* _SPRITE_VIEW_H_ */

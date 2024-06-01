@@ -1,43 +1,86 @@
-#include <lcom/lcf.h>
-#include <minix/syslib.h>
-#include <minix/drivers.h>
 #include "rtc.h"
 
-static int rtc_hook_id = 8;
+// Variáveis globais
+int rtc_hook_id = RTC_MASK; // Máscara constante = 5
+real_time_info time_info;   // Estrutura que irá conter toda a informação
+uint8_t binary_mode;        // Modo de contagem, variável booleana
 
-int rtc_subscribe_int(uint8_t *bit_no) {
-  *bit_no = rtc_hook_id;
-  if (sys_irqsetpolicy(RTC_IRQ, IRQ_REENABLE, &rtc_hook_id) != OK)
-    return 1;
-  if (sys_irqenable(&rtc_hook_id) != OK)
-    return 1;
-  return 0;
+// O setup consiste em determinar o modo de contagem do RTC
+// E também preencher pela primeira vez a informação do tempo
+void rtc_setup() {
+    binary_mode = rtc_is_binary();
+    rtc_update_time();
 }
 
-int rtc_unsubscribe_int() {
-  if (sys_irqdisable(&rtc_hook_id) != OK)
-    return 1;
-  if (sys_irqrmpolicy(&rtc_hook_id) != OK)
-    return 1;
-  return 0;
+// Subscrição das interrupções. Semelhante aos labs anteriores.
+int rtc_subscribe_interrupts() {
+    return sys_irqsetpolicy(IRQ_RTC, IRQ_REENABLE, &rtc_hook_id);
 }
 
-int rtc_enable_update_interrupts() {
-  sys_outb(RTC_ADDR_REG, RTC_REG_B);
-  uint32_t reg_b;
-  sys_inb(RTC_DATA_REG, &reg_b);
-  reg_b |= RTC_UIE; // Enable Update Interrupt
-  sys_outb(RTC_ADDR_REG, RTC_REG_B);
-  sys_outb(RTC_DATA_REG, reg_b);
-  return 0;
+// Desativação das interrupções. Semelhante aos labs anteriores.
+int rtc_unsubscribe_interrupts() {
+    return sys_irqrmpolicy(&rtc_hook_id);
 }
 
-void rtc_int_handler() {
-  // Read from the RTC to clear the interrupt
-  sys_outb(RTC_ADDR_REG, RTC_REG_C);
-  uint32_t reg_c;
-  sys_inb(RTC_DATA_REG, &reg_c);
+// Leitura do output do RTC, dado um comando
+int rtc_output(uint8_t command, uint8_t *output) {
+    if (sys_outb(REGISTER_INPUT, command) != 0) return 1;
+	if (util_sys_inb(REGISTER_OUTPUT, output) != 0) return 1;
+    return 0;
+}
 
-  // Call function to update time on the screen
-  update_time_on_screen();
+// Retorna 1 se naquele momento o RTC está a atualizar os seus valores internos
+// Nesse caso não devemos ler nenhum registo
+int rtc_is_updating() {
+    uint8_t result;
+    if (rtc_output(REGISTER_UPDATING, &result)) return 1;
+	return result & UPDATING;
+}
+
+// Retorna 1 se o modo de contagem for binário
+int rtc_is_binary() {
+    uint8_t result;
+    if (rtc_output(REGISTER_COUNTING, &result)) return 1;
+	return result & BINARY;
+}
+
+// Retorna 1 se o modo de contagem for BCD
+int rtc_is_bcd() {
+    return !rtc_is_binary();
+}
+
+uint8_t to_binary(uint8_t bcd_number) {
+    return ((bcd_number >> 4) * 10) + (bcd_number & 0xF);
+}
+
+// Faz update às informações da struct time_info
+int rtc_update_time() {
+    if (rtc_is_updating() != 0) return 1;
+    uint8_t output;
+
+    // Seconds
+    if (rtc_output(SECONDS, &output) != 0) return 1;
+    time_info.seconds = binary_mode ? output : to_binary(output);
+
+    // Minutes
+    if (rtc_output(MINUTES, &output) != 0) return 1;
+    time_info.minutes = binary_mode ? output : to_binary(output);
+
+    // Hours
+    if (rtc_output(HOURS, &output) != 0) return 1;
+    time_info.hours = binary_mode ? output : to_binary(output);
+
+    // Day
+    if (rtc_output(DAY, &output) != 0) return 1;
+    time_info.day = binary_mode ? output : to_binary(output);
+
+    // Month
+    if (rtc_output(MONTH, &output) != 0) return 1;
+    time_info.month = binary_mode ? output : to_binary(output);
+
+    // Year
+    if (rtc_output(YEAR, &output) != 0) return 1;
+    time_info.year = binary_mode ? output : to_binary(output);
+
+    return 0;
 }
