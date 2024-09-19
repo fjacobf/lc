@@ -6,9 +6,9 @@
 
 #include "controller/keyboard.h"
 #include "controller/mouse.h"
+#include "controller/rtc.h"
 #include "controller/video.h"
 #include <lcom/timer.h>
-#include "controller/rtc.h"
 
 #define FPS 60
 #define MODE 0x115
@@ -23,9 +23,9 @@ uint8_t rtc_irq_set;
 int main(int argc, char *argv[]) {
   lcf_set_language("PT-PT");
 
-  lcf_trace_calls("/home/lcom/labs/proj/debug/trace.txt");
+  lcf_trace_calls("/home/lcom/labs/proj/src/trace.txt");
 
-  lcf_log_output("/home/lcom/labs/proj/debug/output.txt");
+  lcf_log_output("/home/lcom/labs/proj/src/output.txt");
 
   if (lcf_start(argc, argv))
     return 1;

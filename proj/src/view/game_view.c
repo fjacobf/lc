@@ -34,7 +34,7 @@ extern uint16_t y_max;
 int draw_game() {
 
   if(time_info.hours > 5 && time_info.hours < 18){
-    if (draw_background(SUNNY_BACKGROUND)) {
+    if (draw_background(NIGHT_BACKGROUND)) {
       printf("%s: draw_background(x: 0, y: 0)\n", __func__);
       return 1;
     }
